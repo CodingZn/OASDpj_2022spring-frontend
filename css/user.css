@@ -1,0 +1,71 @@
+
+.row1 *{
+    vertical-align: top;
+}
+.userinfo{
+    margin: 80px;
+    border: black solid 2px;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+}
+.userinfo h2{
+
+}
+.userinfo table{
+    margin: 3px;
+    border-collapse: collapse;
+    border: #707070 solid 2px;
+}
+.userinfo tr:nth-child(even){background-color: #e0e0e0;}
+.userinfo tr:nth-child(odd){background-color: #b9b9b9;}
+
+.userinfo tr:hover {background-color: rgba(255, 252, 202, 0.47);}
+
+.userinfo tr, .userinfo td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.userinfo tr{
+    height: 40px;
+}
+.userinfo td{
+    width: 60px;
+}
+.userinfo td:last-of-type{
+    width: 150px;
+
+ }
+.userinfo .button{
+    margin:20px;
+    display: inline-block;
+}
+.orders{
+    width: 900px;
+    height: fit-content;
+    padding: 40px;
+    border: #707070 dashed 1px;
+    border-collapse: collapse;
+    display: inline-block;
+}
+.orders table{
+    margin: 30px;
+}
+.orders th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.orders td, .orders th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.orders tr:nth-child(even){background-color: #f2f2f2;}
+.orders tr:nth-child(odd){background-color: #b9b9b9;}
+.orders tr:hover {background-color: #ddd;}
+.orders td{
+    width: 200px;
+}
+

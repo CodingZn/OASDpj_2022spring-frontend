@@ -1,0 +1,187 @@
+/*主体页面*/
+body{
+    background: rgba(232, 252, 185, 0.51);
+}
+.nav{
+    background-color: rgba(152, 135, 135, 0.8);
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    /*text-align: center;*/
+    margin: 0 -8px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+.nav .head{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    display: inline;
+}
+.nav .head #title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Showcard Gothic";
+    color: #e8fcb9;
+
+}
+.nav ul{
+    width: 1200px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    position: absolute;
+    top: 5px;
+    left: 60%;
+    display: inline;
+}
+.nav .menu .box{
+    position: relative;
+    background-color: rgba(200,200,200,0.3);
+    width: 80px;
+    height: 30px;
+
+    display: inline-block;
+    text-align: center;
+}
+.nav .menu .select{
+    /*background: none;*/
+    color: black;
+    width: 120px;
+    height: 45px;
+    z-index: 2;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav .list{
+    position: absolute;
+    top: 15px;
+    left: 1170px;
+    /*background-color: rgba(200, 200, 200, 0.5);*/
+    width: 120px;
+    height: 30px;
+    /*border: black solid 1px;*/
+}
+.nav .list ul{
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    background-color: rgb(189, 188, 188);
+}
+.nav .list li{
+
+    position: relative;
+
+    width: 120px;
+    height: 29px;
+    border-bottom: gainsboro solid 1px;
+    border-top: gainsboro solid 1px;
+    display: inline-block;
+    text-align: center;
+}
+/*.main{*/
+/*    width: auto;*/
+/*    height: 800px;*/
+/*    position: relative;*/
+/*    margin-top: 80px;*/
+/*    padding-left: 10px;*/
+/*    padding-right: 10px;*/
+
+/*}*/
+.mainshow{
+
+    height: 580px;
+    background-image: url("/images/Art Store/meditation_1928.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    border-bottom: 4px solid black;
+    overflow: hidden;
+
+}
+
+.mainshow #welcome{
+
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #e8fcb9;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.bottomshow{
+    height: 400px;
+    background-color: rgba(245, 245, 220, 0.5);
+    text-align: center;
+}
+.bottomshow .item{
+    margin: 30px 60px;
+    padding: 10px 0;
+    height: auto;
+    width: 260px;
+    background-color: rgba(221, 221, 221, 0.51);
+    border-radius: 25px;
+    border: black solid 2px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.bottomshow .item .image{
+    border: gainsboro solid 2px;
+    margin: 15px 15px 25px;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+.bottomshow .item .image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bottomshow .item p{
+    /*border: black dashed 1px;*/
+    margin: 0;
+    height: 30px;
+}
+.bottomshow .item .title{
+    font-weight: bold;
+}
+.bottomshow .item .author{
+    font-style: italic;
+}
+.bottomshow .item .price{
+    color: red;
+    font-weight: bolder;
+}
+.bottomshow .item .popularity{
+    color: gray;
+    font-size: smaller;
+}
+.bottomshow .item .button{
+    width: 80px;
+    height: 45px;
+    margin: 10px;
+    border: black solid 1px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+footer{
+    /*height: 25px;*/
+    margin-top: 10px;
+    padding: 8px;
+    background-color: rgba(169, 169, 169, 0.4);
+    text-align: center;
+}
+footer>span{
+
+}

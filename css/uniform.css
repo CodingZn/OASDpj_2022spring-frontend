@@ -1,0 +1,113 @@
+.nav{
+    background-color: rgba(152, 135, 135, 0.8);
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    /*text-align: center;*/
+    margin: 0 -8px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+.nav .head{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    display: inline;
+}
+.nav .head #title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Showcard Gothic";
+    color: #e8fcb9;
+
+}
+.nav ul{
+    width: 1200px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    position: fixed;
+    top: 5px;
+    left: 60%;
+    display: inline;
+}
+.nav .menu .box{
+    position: relative;
+    background-color: rgba(200,200,200,0.3);
+    width: 80px;
+    height: 30px;
+
+    display: inline-block;
+    text-align: center;
+}
+.nav .menu .select{
+    /*background: none;*/
+    color: black;
+    width: 120px;
+    height: 45px;
+    z-index: 2;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav .list{
+    position: fixed;
+    top: 15px;
+    left: 1170px;
+    /*background-color: rgba(200, 200, 200, 0.5);*/
+    width: 120px;
+    height: 30px;
+    /*border: black solid 1px;*/
+}
+.nav .list ul{
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    background-color: rgb(189, 188, 188);
+}
+.nav .list li{
+
+    position: relative;
+
+    width: 120px;
+    height: 29px;
+    border-bottom: gainsboro solid 1px;
+    border-top: gainsboro solid 1px;
+    display: inline-block;
+    text-align: center;
+}
+.main{
+    width: auto;
+    height: 800px;
+    position: relative;
+    margin-top: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.main .background{
+    width: 100%;
+    height: 100%;
+    margin-left: -10px;
+    position: absolute;
+    top: 0;
+
+    transform: scale(100%, 100%);
+    z-index: -1;
+    background: url("/images/Art Store/summer_shade_1923.jpg");
+    background-size: cover;
+    opacity: 0.2;
+}
+.path{
+    height: 80px;
+    vertical-align: middle;
+}
+.path h1{
+    /*border: black dashed 1px;*/
+    display: inline-block;
+}

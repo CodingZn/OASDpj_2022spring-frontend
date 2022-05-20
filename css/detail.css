@@ -1,0 +1,83 @@
+
+.item{
+    width: 70%;
+    border: black solid 1px;
+    background-color: rgba(232, 252, 185, 0.2);
+}
+.item .title{
+
+    border-bottom: black solid 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.item .title h2{
+    font-family: "Adobe Arabic";
+
+}
+.show{
+    padding: 10px;
+    height: 500px;
+}
+/*.columns{*/
+/*    list-style: none;*/
+/*    border: gray solid 6px;*/
+
+/*}*/
+.column{
+    width: 40%;
+    max-height: 100%;
+    min-height: 90%;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: middle;
+    position: relative;
+    /*top: auto;*/
+    border: gainsboro solid 1px;
+
+    display: inline-block;
+}
+.column ul{
+    margin: 20px auto 20px;
+    width: 80%;
+    padding-left: 0;
+    list-style: none;
+    border-collapse: collapse;
+}
+.column li{
+    text-align: center;
+    border: black solid 1px;
+}
+.column .price{
+    color: red;
+    font-weight: bolder;
+    font-size: large;
+}
+.column .manual{
+    text-align: center;
+}
+.column .manual .button{
+    width: 80px;
+    height: 45px;
+    margin: 10px 30px;
+    border: black solid 1px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.show .line{
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+.column img{
+
+    position: absolute;
+    top: 50%;
+    margin-top: -50%;
+    display: inline-block;
+    max-width: 90%;
+    min-width: 80%;
+
+
+}

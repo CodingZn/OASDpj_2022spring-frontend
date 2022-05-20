@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="css/loginandregister.css">
+    <script src="js/register.js" type="module"></script>
+</head>
+<body>
+<div class="inputbox registerbox">
+    <h3 class="title">请注册</h3>
+    <form id="registerForm" onsubmit="return false">
+        <label>
+            <input type="text" name="username" placeholder="用户名" class="textbox" id="username">
+            <span class="errorform" id="usernameErrForm">用户名只能包含大小写字母、数字、"_"、"-"！</span>
+            <span class="errorblank" id="usernameBlank">不能为空！</span>
+        </label>
+        <label>
+            <input type="tel" name="phone" placeholder="手机号码" class="textbox" id="phone">
+            <span class="errorform" id="phoneErrForm">请输入正确的电话号码！</span>
+            <span class="errorblank" id="phoneBlank">不能为空！</span>
+        </label>
+        <label>
+            <input type="text" name="address" placeholder="地址" class="textbox" id="address">
+<!--            <span class="errorform">&nbsp;</span>-->
+            <span class="errorblank" id="addressBlank">不能为空！</span>
+        </label>
+        <label>
+            <input type="email" name="email" placeholder="邮箱" class="textbox" id="email">
+            <span class="errorform" id="emailErrForm">必须为正确邮箱格式！</span>
+            <span class="errorblank" id="emailBlank">不能为空！</span>
+        </label>
+        <label>
+            <input type="password" name="password" placeholder="密码" class="textbox" id="password">
+            <span class="errorform" id="passwordErrForm">密码长度必须大于等于 6 位，不得为纯数字，只能包含数字、字母和 +-=_:;. </span>
+            <span class="errorblank" id="passwordBlank">不能为空！</span>
+        </label>
+        <label>
+            <input type="password" name="password2" placeholder="确认密码" class="textbox" id="password2">
+            <span class="errorform" id="password2ErrForm">两次密码输入不一致！</span>
+            <span class="errorblank" id="password2Blank">不能为空！</span>
+        </label>
+        <br/>
+        <input type="submit" value="提交" id="button">
+    </form>
+
+    <p>
+        <a href="login.html">老用户登录</a>
+        <a href="index.html">返回首页</a>
+    </p>
+
+</div>
+</body>
+</html>

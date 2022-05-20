@@ -1,0 +1,172 @@
+
+.main{
+    width: auto;
+    min-height: 600px;
+    position: relative;
+    margin-top: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.main .background{
+    width: 100%;
+    height: 100%;
+    margin-left: -10px;
+    position: absolute;
+    top: 0;
+
+    transform: scale(100%, 100%);
+    z-index: -1;
+    background: beige ;
+    background-size: cover;
+    opacity: 0.7;
+}
+.path{
+    height: 80px;
+    vertical-align: middle;
+}
+.path h1{
+    /*border: black dashed 1px;*/
+    display: inline-block;
+}
+.main .search{
+    /*border: gray solid 1px;*/
+    padding: 10px;
+}
+.searchbox .textbox{
+    text-align: left;
+    border: 2px solid #525967;
+    border-radius: 10px;
+    background: none;
+    display: inline-block;
+    margin: 30px;
+    padding: 15px 30px;
+    height: 25px;
+    width: 80%;
+    outline: none;
+    color: #000000;
+}
+.searchbox .button{
+    width: 80px;
+    height: 45px;
+    margin: 10px;
+    border: black solid 1px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+.choice ul{
+    list-style: none;
+    /*display: inline;*/
+    border: black solid 1px;
+    background-color: #eeeeee;
+}
+.choice .option{
+    margin: 5px;
+    width: 150px;
+    height: 40px;
+    border: darkgrey solid 2px;
+    border-bottom: 0;
+    text-align: center;
+    vertical-align: center;
+    display: inline-block;
+    background-color: #e0e0e0;
+ }
+.choice .left{
+    margin-left: 30px;
+    width: 70px;
+    height: 40px;
+    display: inline-block;
+}
+.main .show{
+    border: gray solid 1px;
+    padding: 50px;
+}
+
+.item{
+    width: 350px;
+    height: 400px;
+    display: inline-block;
+    background: rgba(232, 252, 185, 0.3);
+    border: black solid 1px;
+    margin: 20px;
+    padding: 18px;
+
+}
+.item .info{
+    height: 200px;
+    border: gainsboro dashed 1px;
+    padding: 0;
+    text-align: center;
+}
+.item .info>*{
+    vertical-align: top;
+    display: inline-block;
+    border: darkgrey dashed 1px;
+    margin: 2px;
+}
+.item .info .image{
+    width: 184px;
+    height: 184px;
+}
+.item .info .image img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.item .info .property{
+    width: 134px;
+    height: 184px;
+}
+.property p{
+    font-size: smaller;
+    padding: 5px;
+    margin: 10px 5px;
+    border: black dashed 1px;
+}
+.item .intro{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-line-clamp: 2;
+    -moz-box-orient: vertical;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+.item .info2{
+    height: 50px;
+    border: gainsboro dashed 1px;
+    padding: 0;
+    text-align: center;
+}
+.item .info2>*{
+
+    display: inline-block;
+    border: darkgrey dashed 1px;
+    margin: 9px;
+    width: 140px;
+    height: 30px;
+}
+.info2 span{
+    vertical-align: middle;
+}
+.item .conducts{
+    margin: 20px 0;
+    height: 45px;
+    border: darkgrey dashed 1px;
+    padding: 0;
+    text-align: center;
+}
+.item .conducts .button{
+    margin: 5px 30px;
+    width: 80px;
+    height: 35px;
+
+    border: black solid 1px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
