@@ -5,15 +5,26 @@
 	<title>test</title>
  
 </head>
+
+<script type="module">
+	import {Ajax} from "./js/ajax.js";
+
+    window.onload = function (){
+        var button = document.getElementById("button");
+        button.addEventListener("click", buttonclick);
+        
+	}
+    
+    function buttonclick(){
+        Ajax.get("http://localhost:80/php/testttt.php", callback);
+        
+        function callback(xhr){
+            let xhr1 =new XMLHttpRequest();
+            document.write(xhr.response);
+        }
+    }
+</script>
 <body>
-<form method="post" action="http://localhost:63342/phpdemo/php/database.php">
-	<label>
-		<input type="text" name="username" placeholder="用户名" class="textbox" id="username">
-	</label>
-	<label>
-		<input type="password" name="password" placeholder="密码" class="textbox" id="password">
-	</label>
-	<input type="submit" value="提交" class="button" id="button">
-</form>
+<input type="button" id="button">
 </body>
 </html>

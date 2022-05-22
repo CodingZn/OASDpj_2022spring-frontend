@@ -33,8 +33,13 @@ body{
 
     position: absolute;
     top: 5px;
-    left: 60%;
     display: inline;
+}
+#menu_auth{
+    left: 50%;
+}
+#menu_unauth{
+    left: 60%;
 }
 .nav .menu .box{
     position: relative;

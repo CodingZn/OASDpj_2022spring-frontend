@@ -1,5 +1,6 @@
 import {Ajax} from "./ajax.js";
 import {formToJson} from "./form.js";
+import {cookie} from "./vars.js";
 
 window.onload = function(){
 
@@ -23,7 +24,9 @@ window.onload = function(){
             var o = JSON.parse(jsontext);
             alert(o.message);
             if (xhr.status === 200){
-                window.location.href = "../web1.iml/index.html";
+                console.log(document.cookie);
+                // window.location.href = "../web1.iml/index.html";
+                console.log(cookie);
             }
             else {
                 window.location.reload();
