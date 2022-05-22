@@ -5,14 +5,17 @@
 	<title>购物车</title>
 	<link type="text/css" rel="stylesheet" href="css/uniform.css">
 	<link type="text/css" rel="stylesheet" href="css/shopping.css">
+	<link rel="stylesheet" type="text/css" href="css/generalcss/navigation.css">
 </head>
 <body>
 <div class="container">
 	<div class="nav" id="nav">
-        <span class="head" id="logo">
-            <span id="title">Art Store</span>
-        </span>
-		<ul class="menu" id="menu_auth">
+		<div class="logos">
+			<span id="title">Art Store</span>
+			<img src="images/logo1.png" id="logopic">
+		</div>
+		
+		<ul class="menu" id="menu_unauth">
 			<li class="box">
 				<a href="index.html" >
 					<span>首页</span>
@@ -29,6 +32,33 @@
 				</a>
 			</li>
 			<li class="box">
+				<a href="login.html" >
+					<span>登录</span>
+				</a>
+			</li>
+			<li class="box">
+				<a href="register.html" >
+					<span>注册</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="menu" id="menu_auth">
+			<li class="box">
+				<a href="index.html" >
+					<span>首页</span>
+				</a>
+			</li>
+			<li class="box">
+				<a href="search.html">
+					<span>搜索</span>
+				</a>
+			</li>
+			<li class="box">
+				<a href="detail.html" >
+					<span>商品详情</span>
+				</a>
+			</li>
+			<li class="box" id="username_nav_display">
 				<span>用户名</span>
 			</li>
 			<li class="box">

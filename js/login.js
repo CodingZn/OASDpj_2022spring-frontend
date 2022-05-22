@@ -1,6 +1,7 @@
-import {Ajax} from "./ajax.js";
+import {Ajax} from "./generaljs/ajax.js";
 import {formToJson} from "./form.js";
 import {cookie} from "./vars.js";
+import {setCookie, getCookie, checkCookie} from "./generaljs/cookie.js";
 
 window.onload = function(){
 
@@ -17,16 +18,15 @@ window.onload = function(){
 
     function login(data){
 
-        Ajax.post("http://localhost:80/php/login.php", data, callback);
+        Ajax.post("/php/login.php", data, callback);
 
         function callback(xhr) {
             var jsontext = xhr.responseText;
             var o = JSON.parse(jsontext);
             alert(o.message);
             if (xhr.status === 200){
+                setCookie("user", o.user, 1);
                 console.log(document.cookie);
-                // window.location.href = "../web1.iml/index.html";
-                console.log(cookie);
             }
             else {
                 window.location.reload();

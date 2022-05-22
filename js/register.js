@@ -1,4 +1,4 @@
-import {Ajax} from "./ajax.js";
+import {Ajax} from "./generaljs/ajax.js";
 import {formCheck, formToJson, formToObj, checkOneForm} from "./form.js";
 
 window.onload = function (){
@@ -42,7 +42,7 @@ function submit(){
 
 function register(data){
 
-    Ajax.post("http://localhost:80/php/register.php", data, callback);
+    Ajax.post("/php/register.php", data, callback);
 
     function callback(xhr) {
         var jsontext = xhr.responseText;

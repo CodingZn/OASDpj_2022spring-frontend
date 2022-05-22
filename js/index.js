@@ -1,4 +1,4 @@
-import {Ajax} from "./ajax.js";
+import {Ajax} from "./generaljs/ajax.js";
 
 window.onload = function (){
     document.getElementById("menu_unauth").style.display="none";
