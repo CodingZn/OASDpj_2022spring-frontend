@@ -17,15 +17,14 @@ export function getCookie(cname)
     }
     return "";
 }
-export function checkCookie(){
-    var user=getCookie("username");
+
+//检查是否登录，返回cookie中user的值或false
+export function checkUserCookie(){
+    var user=getCookie("user");
     if (user!=""){
-        alert("欢迎 " + user + " 再次访问");
+        return user;
     }
     else {
-        user = prompt("请输入你的名字:","");
-        if (user!="" && user!=null){
-            setCookie("username",user,30);
-        }
+        return false;
     }
 }

@@ -1,10 +1,13 @@
 import {Ajax} from "./generaljs/ajax.js";
 import {formToJson} from "./form.js";
 import {cookie} from "./vars.js";
-import {setCookie, getCookie, checkCookie} from "./generaljs/cookie.js";
+import {setCookie, getCookie, checkUserCookie} from "./generaljs/cookie.js";
 
 window.onload = function(){
-
+    if(checkUserCookie()!= false){
+        alert("您已登录！");
+        window.location.href = "/web1.iml/index.html";
+    }
 
     var button = document.getElementById("button");
     button.addEventListener("click", func1, false);
@@ -26,7 +29,8 @@ window.onload = function(){
             alert(o.message);
             if (xhr.status === 200){
                 setCookie("user", o.user, 1);
-                console.log(document.cookie);
+                setCookie("username", "o.username", 1);
+                window.location.href = "/web1.iml/index.html";
             }
             else {
                 window.location.reload();
