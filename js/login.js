@@ -6,7 +6,7 @@ import {setCookie, getCookie, checkUserCookie} from "./cookie.js";
 window.onload = function(){
     if(checkUserCookie()!= false){
         alert("您已登录！");
-        window.location.href = "/web1.iml/index.html";
+        window.location.href = "../html/index.html";
     }
 
     var button = document.getElementById("button");
@@ -30,7 +30,7 @@ window.onload = function(){
             if (xhr.status === 200){
                 setCookie("user", o.user, 1);
                 setCookie("username", "o.username", 1);
-                window.location.href = "/web1.iml/index.html";
+                window.location.href = "../html/index.html";
             }
             else {
                 window.location.reload();

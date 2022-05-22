@@ -49,7 +49,7 @@ function register(data){
         var o = JSON.parse(jsontext);
         alert(o.message);
         if (xhr.status === 200){
-            window.location.href = "../web1.iml/index.html";
+            window.location.href = "../html/index.html";
         }
         else {
             window.location.reload();

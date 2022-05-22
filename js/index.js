@@ -1,11 +1,10 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
+import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
 
 window.onload = function (){
     loadNavigation();
 
-    var quit = document.getElementById("quit");
-    quit.addEventListener("click", quitLogin);
 
     getRollingShowPics();
 
@@ -14,12 +13,9 @@ window.onload = function (){
 
 }
 
-function quitLogin(){
-    alert("quit!");
-}
 
 function getRollingShowPics(){
-
+    // Ajax.get();
 }
 
 function getNewestPaintings(){

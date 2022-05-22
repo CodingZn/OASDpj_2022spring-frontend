@@ -26,7 +26,7 @@ export function loadNavigation(){
 
 function logout(){
     alert("退出登录！");
-    setCookie("user", null, -1);
-    setCookie("username", null, -1);
-    window.location.reload();
+    setCookie("user", null, -1);alert(11);
+    setCookie("username", null, -1);alert(22);
+    // window.location.reload();
 }
