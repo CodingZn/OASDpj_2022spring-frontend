@@ -1,12 +1,16 @@
-import {Ajax} from "./generaljs/ajax.js";
+import {Ajax} from "./ajax.js";
+import {loadNavigation} from "./navigation.js";
 
 window.onload = function (){
-    document.getElementById("menu_unauth").style.display="none";
+    loadNavigation();
 
     var quit = document.getElementById("quit");
     quit.addEventListener("click", quitLogin);
 
     getRollingShowPics();
+
+
+    var mainImgEle = document.getElementById("mainImg"); console.log(mainImgEle);
 
 }
 
@@ -15,5 +19,9 @@ function quitLogin(){
 }
 
 function getRollingShowPics(){
+
+}
+
+function getNewestPaintings(){
 
 }

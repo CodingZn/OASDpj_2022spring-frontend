@@ -47,9 +47,11 @@
 }
 #menu_auth{
     left: 50%;
+    display: none;
 }
 #menu_unauth{
     left: 60%;
+    display: none;
 }
 .nav .menu .box{
     position: relative;

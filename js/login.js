@@ -1,7 +1,7 @@
-import {Ajax} from "./generaljs/ajax.js";
+import {Ajax} from "./ajax.js";
 import {formToJson} from "./form.js";
 import {cookie} from "./vars.js";
-import {setCookie, getCookie, checkUserCookie} from "./generaljs/cookie.js";
+import {setCookie, getCookie, checkUserCookie} from "./cookie.js";
 
 window.onload = function(){
     if(checkUserCookie()!= false){

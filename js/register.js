@@ -1,4 +1,4 @@
-import {Ajax} from "./generaljs/ajax.js";
+import {Ajax} from "./ajax.js";
 import {formCheck, formToJson, formToObj, checkOneForm} from "./form.js";
 
 window.onload = function (){

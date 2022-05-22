@@ -1,6 +1,6 @@
 import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
 
-window.onload = function (){
+export function loadNavigation(){
     var nav = document.getElementById("nav");
     var menu_unauth = document.getElementById("menu_unauth");
     var menu_auth = document.getElementById("menu_auth");
