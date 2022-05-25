@@ -18,24 +18,32 @@ window.onload = function(){
         login(data);
     }
 
+}
 
-    function login(data){
+function login(data){
+    var url = "/login.php";
 
-        Ajax.post("/php/login.php", data, callback);
+    Ajax.post(url, data, callback);
 
-        function callback(xhr) {
-            var jsontext = xhr.responseText;
-            var o = JSON.parse(jsontext);
-            alert(o.message);
-            if (xhr.status === 200){
-                setCookie("user", o.user, 1);
-                setCookie("username", "o.username", 1);
-                window.location.href = "../html/index.html";
-            }
-            else {
-                window.location.reload();
-            }
+    function callback(xhr) {
+        var jsontext = xhr.responseText;
+        var o = JSON.parse(jsontext);
+
+        var msg = o.message;
+        var token = o.token;
+        var username = o.username;
+        var CustomerID = o.CustomerID;
+
+        if (xhr.status === 200){
+            setCookie("token", token, 1);
+            setCookie("CustomerID", CustomerID, 1);
+            setCookie("username", username, 1);
+            alert(msg);
+            window.location.href = "../html/index.html";
+        }
+        else {
+            alert(msg);
+            window.location.reload();
         }
     }
-
 }
