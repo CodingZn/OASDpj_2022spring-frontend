@@ -85,6 +85,8 @@ function deleteReview(RatingID){
         var msg = o.message;
 
         alert(msg);
+
+        window.location.reload();
     }
 }
 
@@ -104,18 +106,4 @@ function addToCart(data){
     }
 }
 
-function deleteFromCart(PaintingID){
-    var par = {PaintingID : PaintingID};
-    var query = Param.parseQueryString(par);
-    var url = "/cart/cart.php";
-    Ajax.delete(url+query, callback);
-
-    function callback(xhr){
-        var jsontext = xhr.responseText;
-        var o = JSON.parse(jsontext);
-
-        var msg = o.message;
-
-        alert(msg);
-    }
-}
+import {deleteFromCart} from "./cart.js";
