@@ -6,18 +6,25 @@ window.onload = function (){
     loadNavigation();
 
 
-    getRollingShowPics();
-
 
     var mainImgEle = document.getElementById("mainImg"); console.log(mainImgEle);
 
 }
 
+function getPaintingSrcs(){
+    var url = "/index.php";
 
-function getRollingShowPics(){
-    // Ajax.get();
-}
+    Ajax.get(url, callback);
 
-function getNewestPaintings(){
+    function callback(xhr){
+        var jsontext = xhr.responseText;
+        var o = JSON.parse(jsontext);
 
+        var rolling5Pics = o.rolling5Pics;
+        var newest3Paintings = o.newest3Paintings;
+        var popular3Paintings = o.popular3Paintings;
+
+
+
+    }
 }
