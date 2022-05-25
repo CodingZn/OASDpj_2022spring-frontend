@@ -10,11 +10,10 @@ export const Ajax = {
                 callback(xhr);
             }
         }
-        xhr.timeout = 500;
+        xhr.timeout = 2000;
         xhr.send();
     },
 
-    // data应为'a=a1&b=b1'这种字符串格式，在jq里如果data为对象会自动将对象转成这种字符串格式
     post: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', baseurl + url, true);
@@ -26,13 +25,61 @@ export const Ajax = {
                 callback(xhr);
             }
         }
-        xhr.timeout = 500;
+        xhr.timeout = 2000;
         xhr.send(data);
 
     },
+
+    put: function (url, data, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', baseurl + url, true);
+        // 添加http头，发送信息至服务器时内容编码类型
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                console.log(xhr.responseText);
+                callback(xhr);
+            }
+        }
+        xhr.timeout = 2000;
+        xhr.send(data);
+
+    },
+
+    patch: function (url, data, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', baseurl + url, true);
+        // 添加http头，发送信息至服务器时内容编码类型
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                console.log(xhr.responseText);
+                callback(xhr);
+            }
+        }
+        xhr.timeout = 2000;
+        xhr.send(data);
+
+    },
+
+    delete: function (url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', baseurl + url, true);
+        // 添加http头，发送信息至服务器时内容编码类型
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                console.log(xhr.responseText);
+                callback(xhr);
+            }
+        }
+        xhr.timeout = 2000;
+        xhr.send(data);
+
+    }
 
 
 
 };
 
-var baseurl= "http://localhost:80";
+var baseurl= "http://localhost:80/php";
