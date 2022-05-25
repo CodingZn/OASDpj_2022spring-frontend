@@ -41,17 +41,21 @@ function submit(){
 }
 
 function register(data){
-
-    Ajax.post("/php/register.php", data, callback);
+    var url = "/register.php";
+    Ajax.post(url, data, callback);
 
     function callback(xhr) {
         var jsontext = xhr.responseText;
         var o = JSON.parse(jsontext);
-        alert(o.message);
+
+        var msg = o.message;
+
         if (xhr.status === 200){
-            window.location.href = "../html/index.html";
+            alert(msg);
+            window.location.href = "../html/login.html";
         }
         else {
+            alert(msg);
             window.location.reload();
         }
     }
