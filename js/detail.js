@@ -32,16 +32,16 @@ function getPaintingDetail(PaintingID){
 //review
 
 function getReviews(PaintingID){
+    var url = "/detail/paintingReview.php";
     var par = {PaintingID : PaintingID};
     var query = Param.parseQueryString(par);
-    var url = "/detail/paintingReview.php";
     Ajax.get(url+query, callback);
 
     function callback(xhr){
         var jsontext = xhr.responseText;
         var o = JSON.parse(jsontext);
 
-        var reviews = o['reviews'];
+        var reviews = o.reviews;
 
         if (xhr.status === 200){
         }
