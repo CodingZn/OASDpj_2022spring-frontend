@@ -5,7 +5,8 @@ import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
 window.onload = function (){
     loadNavigation();
 
-
+    getPaintingSrcs();
+    alert('aaa');
 
     var mainImgEle = document.getElementById("mainImg"); console.log(mainImgEle);
 
