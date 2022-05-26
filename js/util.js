@@ -8,7 +8,7 @@ export const Param = {
             let value = obj[key];
             query = query + key + '=' + value + '&';
         }
-        query = query.slice(0, -1);alert(query)
+        query = query.slice(0, -1);
         return query;
     }
 }

@@ -32,7 +32,7 @@ export const Ajax = {
 
     put: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', baseurl + url, true);
+        xhr.open('PUT', baseurl + url, true);
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -48,7 +48,7 @@ export const Ajax = {
 
     patch: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', baseurl + url, true);
+        xhr.open('PATCH', baseurl + url, true);
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -64,7 +64,7 @@ export const Ajax = {
 
     delete: function (url, callback) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', baseurl + url, true);
+        xhr.open('DELETE', baseurl + url, true);
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -76,9 +76,26 @@ export const Ajax = {
         xhr.timeout = 2000;
         xhr.send(data);
 
+    },
+
+    upload_post: function (url, fileName, file, callback) {
+        var uploadForm = new FormData();
+        uploadForm.append(fileName, file);
+        uploadForm.enctype="multipart/form-data";
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', baseurl + url, true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                console.log(xhr.responseText);
+                callback(xhr);
+            }
+        }
+        xhr.timeout = 2000;
+        xhr.send(uploadForm);
+
     }
-
-
 
 };
 
