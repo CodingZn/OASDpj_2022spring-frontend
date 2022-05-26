@@ -1,8 +1,11 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
-import {Param} from "./util";
+import {Param} from "./util.js";
 
 window.onload = function (){
+    getUserInfo();
+    getMyPaintings('released');
+    getOrders();
 
 }
 
