@@ -2,6 +2,7 @@ export const Ajax = {
     get: function (url, callback) {
         // XMLHttpRequest对象用于在后台与服务器交换数据
         var xhr = new XMLHttpRequest();
+        xhr.withCredentials=true;
         xhr.open('GET', baseurl + url, true);
         xhr.onreadystatechange = function () {
             // readyState == 4说明请求已完成
@@ -17,6 +18,7 @@ export const Ajax = {
     post: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', baseurl + url, true);
+        xhr.withCredentials=true;
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -33,6 +35,7 @@ export const Ajax = {
     put: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('PUT', baseurl + url, true);
+        xhr.withCredentials=true;
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -49,6 +52,7 @@ export const Ajax = {
     patch: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('PATCH', baseurl + url, true);
+        xhr.withCredentials=true;
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -65,6 +69,7 @@ export const Ajax = {
     delete: function (url, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('DELETE', baseurl + url, true);
+        xhr.withCredentials=true;
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
@@ -85,6 +90,7 @@ export const Ajax = {
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', baseurl + url, true);
+        xhr.withCredentials=true;
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {

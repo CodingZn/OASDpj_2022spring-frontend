@@ -1,9 +1,12 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
+import {getCookie, setCookie} from "./cookie.js";
 
 window.onload = function (){
 
+    console.log(document.cookie);
+    getAllinCart();
 }
 
 function getAllinCart(){
