@@ -63,3 +63,16 @@
 #nav .menu>.block:last-child{
     margin-right: 20px;
 }
+#nav .menu>.list{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+#nav .menu>.list>.block{
+    width: 90px;
+    height: 60px;
+    text-align: center;
+    margin: 0;
+
+    /*background-color: darkorange;*/
+}
