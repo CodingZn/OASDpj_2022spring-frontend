@@ -4,7 +4,10 @@ import {Param} from "./util.js";
 import {setCookie} from "./cookie.js";
 
 window.onload = function (){
-    // getPaintingDetail('8');
+    getPaintingDetail('472');
+    getReviews('472');
+
+    alert('test ok!')
 }
 
 //detail
@@ -23,7 +26,10 @@ function getPaintingDetail(PaintingID){
 
         if (xhr.status === 200){
         }
-        else {
+        else{
+            var msg = o.message;
+            alert(msg);
+            window.location.href="../html/index.html";
         }
     }
 
