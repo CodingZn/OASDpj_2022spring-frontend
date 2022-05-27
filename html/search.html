@@ -4,279 +4,318 @@
     <meta charset="UTF-8">
     <title>搜索</title>
     <link rel="stylesheet" type="text/css" href="../css/search.css">
-    <link rel="stylesheet" type="text/css" href="../css/uniform.css">
     <link rel="stylesheet" type="text/css" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" href="../css/painting_overview.css">
+    <link rel="stylesheet" type="text/css" href="../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../css/paging.css">
+    
     <script src="../js/search.js" type="module"></script>
 
 </head>
 <body>
 <div class="container">
-    <div class="nav" id="nav">
-        <div class="logos">
-            <span id="title">Art Store</span>
-            <img src="../images/logo1.png" id="logopic">
+    <div id="nav">
+        <div class="box">
+            <img src="../images/logo1.png" id="logo" class="block">
         </div>
+        <div class="box">
+            <div class="block">
+                <p id="StoreName">X Art Store</p>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box menu" id="menu_visitor" style="display: none">
+            <div class="block">
+                <p>首页</p>
+            </div>
+            <div class="block">
+                <p>搜索</p>
+            </div>
+            <div class="block">
+                <p>商品详情</p>
+            </div>
+            <div class="block">
+                <p>登录</p>
+            </div>
+            <div class="block">
+                <p>注册</p>
+            </div>
         
-        <ul class="menu" id="menu_unauth">
-            <li class="box">
-                <a href="index.html" >
-                    <span>首页</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="search.html">
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="detail.html" >
-                    <span>商品详情</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="login.html" >
-                    <span>登录</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="register.html" >
-                    <span>注册</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="menu" id="menu_auth">
-            <li class="box">
-                <a href="index.html" >
-                    <span>首页</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="search.html">
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="detail.html" >
-                    <span>商品详情</span>
-                </a>
-            </li>
-            <li class="box" id="username_nav_display">
-                <span>用户名</span>
-            </li>
-            <li class="box">
-                <a href="user.html" >
-                    <span>个人中心</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="cart.html" >
-                    <span>购物车</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="release.html" >
-                    <span>发布艺术品</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="index.html" id="quit">
-                    <span>退出登录</span>
-                </a>
-            </li>
-        </ul>
+        </div>
+        <div class="box menu" id="menu_user">
+            <div class="block">
+                <p>首页</p>
+            </div>
+            <div class="block">
+                <p>搜索</p>
+            </div>
+            <div class="block">
+                <p>商品详情</p>
+            </div>
+            <div class="block">
+                <p id="username_nav_display">用户名</p>
+            </div>
+            <div class="block list">
+                <div class="block">
+                    <p>用户操作</p>
+                </div>
+                <div class="block">
+                    <p>个人中心</p>
+                </div>
+                <div class="block">
+                    <p>购物车</p>
+                </div>
+                <div class="block">
+                    <p>发布艺术品</p>
+                </div>
+                <div class="block">
+                    <p id="quit">退出登录</p>
+                </div>
+            </div>
+        
+        </div>
     </div>
-    <div class="main">
-        <div class="background"></div>
-        <div class="path">
-            <h1><a href="index.html">首页</a>&nbsp;&nbsp;>>>搜索</h1>
-        </div>
-        <hr/>
-        <div class="search">
-            <div class="searchbox">
-                <form>
-                    <input type="text" name="searchtext" placeholder="请输入商品相关信息" class="textbox"/>
-                    <input type="button" name="searchbutton" value="搜索" class="button"/>
-                </form>
+    <div class="box" id="NavFiller">
+    
+    </div>
+    <div class="box" id="SearchBox">
+        <div class="content block">
+            <div class="box" id="PathBox">
+                <h1 class="path">
+                    <span>首页 >> 商品详情</span>
+                </h1>
+                <br/>
             </div>
-            <div class="choice">
-                <ul>
-                    <li class="left">流派</li>
-                    <li class="option">111</li>
-                    <li class="option">222</li>
-                    <li class="option">333</li>
-                    <li class="option">444</li>
-                    <li class="option">555</li>
-                    <li class="option">666</li>
-                </ul>
+            <div class="box flexbox box1">
+                <input type="text" name="search" id="SearchText" class="block">
+                <button id="SearchButton" class="block">
+                    <p>Search!</p>
+                </button>
             </div>
-            <div class="choice">
-                <ul>
-                    <li class="left">国别</li>
-                    <li class="option">111</li>
-                    <li class="option">222</li>
-                    <li class="option">333</li>
-                    <li class="option">444</li>
-                    <li class="option">555</li>
-                    <li class="option">666</li>
-                </ul>
+            <div class="box box2 flexbox">
+                <select>
+                    <option>Choose Artist</option>
+                </select>
+                <select>
+                    <option>Choose Genre</option>
+                </select>
+                <select>
+                    <option>Choose Subject</option>
+                </select>
+                <select>
+                    <option>Sort by</option>
+                </select>
             </div>
-            <div class="choice">
-                <ul>
-                    <li class="left">类别</li>
-                    <li class="option">111</li>
-                    <li class="option">222</li>
-                    <li class="option">333</li>
-                    <li class="option">444</li>
-                    <li class="option">555</li>
-                    <li class="option">666</li>
-                </ul>
-            </div>
-        </div>
-        <div class="show">
-            <div class="info"></div>
-            <div class="container">
-                <div class="item">
-                    <div class="info">
-                        <div class="image"><img src="../images/Art%20Store/lampshade_1948.jpg"></div>
-                        <div class="property">
-                            <p class="name">这是作品名是一个很长很长的名字</p>
-                            <p class="author">这是作者作者的名字也很长</p>
-                        </div>
+            
+            <p class="title">
+                Result >>>
+            </p>
+            
+            <div class="box box4">
+                <div class="overview home">
+                    <div class="box1 box">
+                        <img src="../images/works/100010.jpg">
                     </div>
-                    <p class="intro">
-                        这是作品的一个简介，只截取了两行。这个简介很长很长，本来是在详情中显示的，但是搜索demo中也要有，那就截取两行吧。
-                    </p>
-                    <div class="info2">
-                        <div class="price">
-                            <span>
-                                $ 5000
-                            </span>
+                    <div class="box2 box">
+                        <div class="box21 box">
+                            <div class="textbox">
+                                <p>
+                                    <span>title</span>
+                                </p>
+                            </div>
+                            <div class="textbox">
+                                <p>
+                                    <span>artist name</span>
+                                </p>
+                            </div>
+                            <div class="textbox">
+                                <p>
+                                    <span>price</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="popularity">
-                            <span>
-                                230次浏览
-                            </span>
+                        <div class="box22 box">
+                            <div class="box221 box">
+                                <table class="OptionalInfo">
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="box222 box">
+                                <p>texttexttexttexttexttexttexttexttexttexttexttext</p>
+                                <button><p>DETAIL</p></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="conducts">
-                        <input type="button" value="查看" class="button">
-                        <input type="button" value="加入购物车" class="button">
                     </div>
                 </div>
-                <div class="item">
-                    <div class="info">
-                        <div class="image"><img src="../images/Art%20Store/lampshade_1948.jpg"></div>
-                        <div class="property">
-                            <p class="name">这是作品名是一个很长很长的名字</p>
-                            <p class="author">这是作者作者的名字也很长</p>
-                        </div>
+                <div class="overview home">
+                    <div class="box1 box">
+                        <img src="../images/works/100010.jpg">
                     </div>
-                    <p class="intro">
-                        这是作品的一个简介，只截取了两行。这个简介很长很长，本来是在详情中显示的，但是搜索demo中也要有，那就截取两行吧。
-                    </p>
-                    <div class="info2">
-                        <div class="price">
-                            <span>
-                                $ 5000
-                            </span>
+                    <div class="box2 box">
+                        <div class="box21 box">
+                            <div class="textbox">
+                                <p>
+                                    <span>title</span>
+                                </p>
+                            </div>
+                            <div class="textbox">
+                                <p>
+                                    <span>artist name</span>
+                                </p>
+                            </div>
+                            <div class="textbox">
+                                <p>
+                                    <span>price</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="popularity">
-                            <span>
-                                230次浏览
-                            </span>
+                        <div class="box22 box">
+                            <div class="box221 box">
+                                <table class="OptionalInfo">
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="box222 box">
+                                <p>texttexttexttexttexttexttexttexttexttexttexttext</p>
+                                <button ><p>DETAIL</p></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="conducts">
-                        <input type="button" value="查看" class="button">
-                        <input type="button" value="加入购物车" class="button">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="info">
-                        <div class="image"><img src="../images/Art%20Store/lampshade_1948.jpg"></div>
-                        <div class="property">
-                            <p class="name">这是作品名是一个很长很长的名字</p>
-                            <p class="author">这是作者作者的名字也很长</p>
-                        </div>
-                    </div>
-                    <p class="intro">
-                        这是作品的一个简介，只截取了两行。这个简介很长很长，本来是在详情中显示的，但是搜索demo中也要有，那就截取两行吧。
-                    </p>
-                    <div class="info2">
-                        <div class="price">
-                            <span>
-                                $ 5000
-                            </span>
-                        </div>
-                        <div class="popularity">
-                            <span>
-                                230次浏览
-                            </span>
-                        </div>
-                    </div>
-                    <div class="conducts">
-                        <input type="button" value="查看" class="button">
-                        <input type="button" value="加入购物车" class="button">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="info">
-                        <div class="image"><img src="../images/Art%20Store/lampshade_1948.jpg"></div>
-                        <div class="property">
-                            <p class="name">这是作品名是一个很长很长的名字</p>
-                            <p class="author">这是作者作者的名字也很长</p>
-                        </div>
-                    </div>
-                    <p class="intro">
-                        这是作品的一个简介，只截取了两行。这个简介很长很长，本来是在详情中显示的，但是搜索demo中也要有，那就截取两行吧。
-                    </p>
-                    <div class="info2">
-                        <div class="price">
-                            <span>
-                                $ 5000
-                            </span>
-                        </div>
-                        <div class="popularity">
-                            <span>
-                                230次浏览
-                            </span>
-                        </div>
-                    </div>
-                    <div class="conducts">
-                        <input type="button" value="查看" class="button">
-                        <input type="button" value="加入购物车" class="button">
                     </div>
                 </div>
-                <div class="item">
-                    <div class="info">
-                        <div class="image"><img src="../images/Art%20Store/lampshade_1948.jpg"></div>
-                        <div class="property">
-                            <p class="name">这是作品名是一个很长很长的名字</p>
-                            <p class="author">这是作者作者的名字也很长</p>
-                        </div>
+                <div class="overview home">
+                    <div class="box1 box">
+                        <img src="../images/works/100010.jpg">
                     </div>
-                    <p class="intro">
-                        这是作品的一个简介，只截取了两行。这个简介很长很长，本来是在详情中显示的，但是搜索demo中也要有，那就截取两行吧。
-                    </p>
-                    <div class="info2">
-                        <div class="price">
-                            <span>
-                                $ 5000
-                            </span>
+                    <div class="box2 box">
+                        <div class="box21 box">
+                            <div class="textbox">
+                                <p>
+                                    <span>title</span>
+                                </p>
+                            </div>
+                            <div class="textbox">
+                                <p>
+                                    <span>artist name</span>
+                                </p>
+                            </div>
+                            <div class="textbox">
+                                <p>
+                                    <span>price</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="popularity">
-                            <span>
-                                230次浏览
-                            </span>
+                        <div class="box22 box">
+                            <div class="box221 box">
+                                <table class="OptionalInfo">
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>info1</span>
+                                        </td>
+                                        <td>
+                                            <span>value1</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="box222 box">
+                                <p>texttexttexttexttexttexttexttexttexttexttexttext</p>
+                                <button><p>DETAIL</p></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="conducts">
-                        <input type="button" value="查看" class="button">
-                        <input type="button" value="加入购物车" class="button">
                     </div>
                 </div>
             </div>
-
+            <div class="box paging flexbox">
+                <span class="turn"> < </span>
+                <span> 1 </span>
+                <span class="turn"> > </span>
+            </div>
         </div>
     </div>
 </div>

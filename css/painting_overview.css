@@ -1,0 +1,104 @@
+
+.overview{
+    width: 1520px;
+    height: 400px;
+    margin: 0 80px 0;
+
+    border: #707070 2px solid;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: rgba(245, 245, 220, 0.3);
+
+}
+.overview:hover{
+    background-color: rgba(245, 245, 220, 0.8);
+}
+.overview>.box1{
+    width: 400px;
+    height: 100%;
+    margin: 0;
+
+    border-right: #707070 2px solid;
+
+}
+.overview>.box1>img{
+    height: 360px;
+    width: 360px;
+    margin: 20px;
+}
+.overview>.box2{
+    width: 1120px;
+    height: 100%;
+    margin: 0;
+}
+.overview>.box2>.box21{
+    height: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.overview>.box2>.box21>.textbox:nth-child(1){flex: 4 4 0; border-right: #707070 1px solid}
+.overview>.box2>.box21>.textbox:nth-child(2){flex: 4 4 0; border-right: #707070 1px solid}
+.overview>.box2>.box21>.textbox:nth-child(3){flex: 3 3 0}
+.overview>.box2>.box21>.textbox{
+    padding: 10px;
+}
+.overview>.box2>.box21>.textbox span{
+
+    font-weight: bold;
+    font-size: 40px;
+    color: blue;
+}
+.overview>.box2>.box21>.textbox:first-child p :hover{
+    color: darkred;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.overview>.box2>.box22{
+    height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    /*align-items: center;*/
+
+}
+.overview>.box2>.box22> div:nth-child(1){flex: 2 2 0;}
+.overview>.box2>.box22> div:nth-child(2){flex: 5 5 0;}
+.overview>.box2>.box22 .OptionalInfo{
+    margin: auto auto;
+    border: black 1px solid;
+}
+.overview>.box2>.box22 .OptionalInfo tr{
+    height: 40px;
+}
+.overview>.box2>.box22 .OptionalInfo td{
+    width: 150px;
+    border-right: black 1px dotted;
+    border-bottom: black 1px solid;
+}
+.overview>.box2>.box22>.box222{
+    border: black 1px solid;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.overview>.box2>.box22>.box222>*:first-child{flex: 5 5 0}
+.overview>.box2>.box22>.box222>*:last-child{flex: 1 1 0}
+.overview>.box2>.box22>.box222>p{
+    margin: 20px;
+}
+.overview>.box2>.box22>.box222>button{
+    width: 120px;
+    margin: 10px 10px 10px 80%;
+}
+.overview>.box2>.box22>.box222>button:hover{
+    cursor: pointer;
+}
+.overview:first-child{
+    margin-top: 80px;
+}
+.overview:last-child{
+    margin-bottom: 80px;
+}

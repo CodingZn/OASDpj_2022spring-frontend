@@ -1,0 +1,47 @@
+.box{
+    /*border: #b9b9b9 1px dotted;*/
+}
+.block{
+    /*border: #b9b9b9 1px solid;*/
+    display: block;
+}
+.flexbox{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.content>.box1{
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+}
+
+.content>.box1> input{
+    margin: 40px;
+    flex: 5 5 0;
+    height: 50px;
+}
+.content>.box1> button{
+    margin: 40px;
+    height: 50px;
+    flex: 1 1 0;
+    font-size: 15px;
+}
+.content>.box2{
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+}
+.content>.box2 select{
+    height: 40px;
+    font-size: 20px;
+}
+.content>.box3>p{
+    font-size: 40px;
+    padding: 0 40px;
+}
+.content>.box4{
+    width: 100%;
+
+}
