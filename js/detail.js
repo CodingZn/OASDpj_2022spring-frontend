@@ -4,6 +4,7 @@ import {Param} from "./util.js";
 import {setCookie} from "./cookie.js";
 
 window.onload = function (){
+    loadNavigation();
     // getPaintingDetail('472');
     // getReviews('472');
     //

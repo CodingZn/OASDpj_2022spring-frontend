@@ -3,6 +3,7 @@ import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 
 window.onload = function (){
+    loadNavigation();
     getUserInfo();
     getMyPaintings('released');
     getOrders();

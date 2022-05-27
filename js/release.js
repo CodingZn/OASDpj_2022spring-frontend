@@ -3,6 +3,7 @@ import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 
 window.onload = function (){
+    loadNavigation();
     var button = document.getElementById("button1");
     button.addEventListener("click", fun1);
 

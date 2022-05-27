@@ -4,6 +4,7 @@ import {Param} from "./util.js";
 import {getCookie, setCookie} from "./cookie.js";
 
 window.onload = function (){
+    loadNavigation();
 
     console.log(document.cookie);
     getAllinCart();
