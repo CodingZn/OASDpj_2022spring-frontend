@@ -103,6 +103,14 @@ body{
     padding: 0;
 }
 
+
+.content{
+    width: 1680px;
+    margin: auto 120px;
+    padding: 30px 0 90px;
+    background-color: snow;
+}
+
 footer{
     /*height: 25px;*/
     margin-top: 10px;

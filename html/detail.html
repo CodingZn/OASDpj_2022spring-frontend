@@ -4,135 +4,231 @@
     <meta charset="UTF-8">
     <title>详情</title>
     <link rel="stylesheet" type="text/css" href="../css/detail.css">
-    <link rel="stylesheet" type="text/css" href="../css/uniform.css">
-    <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="../css/general.css">
     <script src="../js/detail.js" type="module"></script>
 </head>
 <body>
 
 <div class="container">
-    <div class="nav" id="nav">
-        <div class="logos">
-            <span id="title">Art Store</span>
-            <img src="../images/logo1.png" id="logopic">
+    <div id="nav">
+        <div class="box">
+            <img src="../images/logo1.png" id="logo" class="block">
         </div>
-        
-        <ul class="menu" id="menu_unauth">
-            <li class="box">
-                <a href="index.html" >
-                    <span>首页</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="search.html">
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="detail.html" >
-                    <span>商品详情</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="login.html" >
-                    <span>登录</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="register.html" >
-                    <span>注册</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="menu" id="menu_auth">
-            <li class="box">
-                <a href="index.html" >
-                    <span>首页</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="search.html">
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="detail.html" >
-                    <span>商品详情</span>
-                </a>
-            </li>
-            <li class="box" id="username_nav_display">
-                <span>用户名</span>
-            </li>
-            <li class="box">
-                <a href="user.html" >
-                    <span>个人中心</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="cart.html" >
-                    <span>购物车</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="release.html" >
-                    <span>发布艺术品</span>
-                </a>
-            </li>
-            <li class="box">
-                <a href="index.html" id="quit">
-                    <span>退出登录</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="main">
-        <div class="background"></div>
-        <div class="path">
-            <h1><a href="index.html">首页</a>&nbsp;&nbsp;>>>一些路径&nbsp;&nbsp;>>>商品详情</h1>
-        </div>
-        <hr/>
-        <div class="item">
-            <div class="title">
-                <h2>艺术品名称&nbsp;&nbsp;&nbsp;artname</h2>
+        <div class="box">
+            <div class="block">
+                <p id="StoreName">X Art Store</p>
             </div>
-
-            <div class="show">
-                <div class="column">
-                    <img alt= "showpic" src="../images/Art%20Store/martini.jpg">
+        </div>
+        <div class="box"></div>
+        <div class="box menu" id="menu_visitor" style="display: none">
+            <div class="block">
+                <p>首页</p>
+            </div>
+            <div class="block">
+                <p>搜索</p>
+            </div>
+            <div class="block">
+                <p>商品详情</p>
+            </div>
+            <div class="block">
+                <p>登录</p>
+            </div>
+            <div class="block">
+                <p>注册</p>
+            </div>
+        
+        </div>
+        <div class="box menu" id="menu_user">
+            <div class="block">
+                <p>首页</p>
+            </div>
+            <div class="block">
+                <p>搜索</p>
+            </div>
+            <div class="block">
+                <p>商品详情</p>
+            </div>
+            <div class="block">
+                <p id="username_nav_display">用户名</p>
+            </div>
+            <div class="block list">
+                <div class="block">
+                    <p>用户操作</p>
                 </div>
-                <div class="line"><br/></div>
-                <div class="column">
-                    <ul>
-                        <li>
-                            <p class="introduction">简介 阿巴阿巴观不合一 </p>
-                        </li>
-                        <li>
-                            <p class="price">$500</p>
-                        </li>
-                        
-                        <li>
-                            <p class="info">1903</p>
-                        </li>
-                        <li>
-                            <p class="info">媒介</p>
-                        </li>
-                        <li>
-                            <p class="info">大小</p>
-                        </li>
-                        <li>
-                            <p class="info">流派</p>
-                        </li>
-                        
-                    </ul>
-                    
-                    <div class="manual">
-                        <input type="button" value="购买" class="button">
-                        <input type="button" value="加入购物车" class="button">
+                <div class="block">
+                    <p>个人中心</p>
+                </div>
+                <div class="block">
+                    <p>购物车</p>
+                </div>
+                <div class="block">
+                    <p>发布艺术品</p>
+                </div>
+                <div class="block">
+                    <p id="quit">退出登录</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="box" id="NavFiller">
+    
+    </div>
+    <div class="box" id="PathBox">
+        <p class="path">
+            <span>首页 >> 商品详情</span>
+        </p>
+    </div>
+    <div class="box" id="DetailBox">
+        <div class="content block">
+            <div id="detail">
+                <div class="box flexbox box1">
+                    <div class="box box11">
+                        <img id="Picture" src="../images/works/101030.jpg">
+                    </div>
+                    <div class="box box12">
+                        <table class="block">
+                            <tr>
+                                <td>
+                                    <span>Title</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>ArtistName</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Price</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Release Date</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Genre</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Subject</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Popularity</span>
+                                </td>
+                                <td>
+                                    <span>value</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="box flexbox box2">
+                    <div class="holder block">
+                        <p><span>Height</span></p>
+                        <p><span>value</span></p>
+                    </div>
+                    <div class="holder block">
+                        <p><span>Width</span></p>
+                        <p><span>value</span></p>
+                    </div>
+                    <div class="holder block">
+                        <p><span>YearOfWork</span></p>
+                        <p><span>value</span></p>
+                    </div>
+                    <div class="holder block">
+                        <p><span>Medium</span></p>
+                        <p><span>value</span></p>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <p>
+                        <span>
+                        Descriptions:
+                        </span>
+                    </p>
+                    <p>
+                        <span>val4sietnwicnoytgnoi4wynatwve5ywrc3imfehnrsgidy
+                            it78gewrj8ynchgrevht7w4wjrnhgvrthd7oes8jralh
+                            cwsvnuthdesjcmhrsnlvudtosjguceshvrnuhvjsul4sie
+                            tnwicnoytgnoi4wynatwve5ywrc3imfehnrsgidy
+                            it78gewrj8ynchgrevht7w4wjrnhgvrthd7oes8jralh
+                            cwsvnuthdesjcmhrsnlvudtosjg
+                            uceshvrnuhvjsul4sietnwicnoytgnoi4wynatwve5ywrc3imfehnrsgidy
+                            it78gewrj8ynchgrevht7w4wjrnhgvrthd7oes8jralh
+                            cwsvnuthdesjcmhrsnlvudtosjguceshsvnuthdesjcmhrsnlvudtosjguceshsvnuthdesjcmhrsnlvudtosjguceshsvnuthdesjcmhrsnlvudtosjguceshsvnuthdesjcmhrsnlvudtosjguceshsvnuthdesjcmhrsnlvudtosjguceshvrnuhvjsul4sie
+                            tnwicnoytgnoi4wynatwve5ywrc3imfehnrsgidy
+                            it78gewrj8ynchgrevht7w4wjrnhgvrthd7oes8jralh
+                            cwsvnuthdesjcmhrsnlvudtosjguceshvrnuhvjsue</span>
+                    </p>
+                </div>
+                <div class="box box4">
+                    <p class="block">
+                        <span>Add To Cart</span>
+                    </p>
+                </div>
+                <div class="box flexbox box5">
+                    <textarea name="comment" id="commentText"></textarea>
+                    <button id="releaseComment">
+                        <p>Release</p>
+                    </button>
+                </div>
+                <div class="box box6">
+                    <div class="review block">
+                        <div class="box flexbox box61">
+                            <div class="textbox">
+                                <span>username</span>
+                            </div>
+                            <div class="textbox">
+                            </div>
+                            <div class="textbox">
+                                <span>date</span>
+                            </div>
+                            <div class="textbox">
+                                <span>likes</span>
+                            </div>
+                        </div>
+                        <div class="box flexbox box62">
+                            <div class="textbox">
+                                <p><span>comment value</span></p>
+                            </div>
+                            <div class="textbox">
+                                <p><span>Like</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <footer>
+        <p>Powered By XTL.&emsp;All rights reserved.&emsp;2022</p>
+    </footer>
 </div>
 </body>
 </html>

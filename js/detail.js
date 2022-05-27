@@ -4,10 +4,10 @@ import {Param} from "./util.js";
 import {setCookie} from "./cookie.js";
 
 window.onload = function (){
-    getPaintingDetail('472');
-    getReviews('472');
-
-    alert('test ok!')
+    // getPaintingDetail('472');
+    // getReviews('472');
+    //
+    // alert('test ok!')
 }
 
 //detail
