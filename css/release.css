@@ -1,50 +1,76 @@
-.form{
-    margin: 30px auto;
-    padding: 30px;
-    width: 90%;
-    min-height: 600px;
-    background-color: #ececec;
-    border: black solid 1px;
+.box{
+    /*border: #b9b9b9 1px dotted;*/
 }
-.form *{
-    margin: 20px auto;
+.block{
+    /*border: #b9b9b9 1px solid;*/
+    display: block;
 }
-.form .image{
-    width: 400px;
-    height: 300px;
-    margin: 20px auto;
-    border: black dashed 1px;
+.flexbox{
+    display: flex;
+    flex-flow: row nowrap;
 }
-.form .image img{
-    max-height: 100%;
-    max-width: 100%;
+#release .box1{
+    justify-content: center;
+    align-items: center;
+}
+#release .box1>*{
+    margin: 30px;
+}
+#release .box1>input{
+    width: 300px;
+    height: 60px;
+    font-size: larger;
+}
+#release .box1>#pic{
+    width: 200px;
+    height: 200px;
+    border: #d39900 solid 5px;
+}
+
+#release .box1>#pic img{
+    width: 100%;
+    height: 100%;
+}
+#release .box2{
+    justify-content: center;
+}
+#release .box2 table{
+    margin: 30px;
+    border: black solid 2px;
+}
+#release .box2 tr{
+    height: 120px;
+}
+#release .box2 td{
+    border: #b9b9b9 solid 1px;
+    text-align: center;
+    width: 360px;
+}
+#release .box2 td>p:first-child{
+    color: #186cbd;
+    font-size: 25px;
+    font-weight: bold;
+}
+#release .box2 td input{
+    height: 25px;
 
 }
-.form .button{
-    width: fit-content;
-    height: fit-content;
-    margin: 20px auto;
+#release .box2 td select{
+    height: 35px;
 }
-.details{
-    width: 900px;
-    border: black dashed 2px;
-    text-align: center;
+#release .box2 td option{
+
 }
-.details .info{
-    margin: 20px auto;
-    width: 800px;
-    border-collapse: collapse;
+#release .box2 td textarea{
+    height: 80px;
+    width: 1000px;
 }
-.details .info p{
-    margin: 15px;
+#release .box3{
+    justify-content: flex-end;
 }
-.details .info td:first-of-type{
-    width: 150px;
-}
-.details .info .textbox{
-    width: 75%;
-}
-.details .info td{
-    text-align: center;
-    border: #d2bd96 dashed 1px;
+#release .box3 button{
+    background-color: rgba(128, 221, 255, 0.4);
+    margin: 40px;
+    height: 80px;
+    width: 200px;
 }
