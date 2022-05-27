@@ -87,7 +87,7 @@ body{
     text-align: center;
     margin: 0;
 
-    background-color: rgba(112, 108, 108, 1);
+    background-color: rgba(152, 135, 135, 0.8);
 }
 #nav .menu>.list>.block:nth-child(1){
 
