@@ -2,13 +2,13 @@ import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 import {setCookie} from "./cookie.js";
+import {detailid} from "./vars.js";
 
 window.onload = function (){
-    loadNavigation();
-    // getPaintingDetail('472');
-    // getReviews('472');
-    //
-    // alert('test ok!')
+    loadNavigation(); alert(detailid)
+    getPaintingDetail(detailid);
+    getReviews(detailid);
+
 }
 
 //detail

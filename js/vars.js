@@ -1,1 +1,1 @@
-export var cookie = {};
+export const PicBaseSrc = "../../images/works/"
