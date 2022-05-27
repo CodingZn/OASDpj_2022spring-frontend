@@ -1,0 +1,41 @@
+.flexbox{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.overview>.box2>.box22>.box222>.buttons_box{
+    height: 50px;
+
+    margin: 10px;
+
+    justify-content: space-around;
+}
+.overview>.box2>.box22>.box222>.buttons_box button{
+    width: 120px;
+    margin: 0;
+}
+.overview>.box2>.box22>.box222>.buttons_box button:hover{
+    cursor: pointer;
+}
+.overview>.checkbox> input{
+    width: 30px;
+    height: 30px;
+}
+#CartBox .chosen{
+    margin: 20px auto;
+    padding: 20px 0;
+    height: 100px;
+    width: 1520px;
+    border-top: black 1px solid;
+    justify-content: flex-end;
+    align-items: center;
+}
+#CartBox .chosen p{
+    padding: 0 60px;
+    width: 1000px;
+    font-size: 40px;
+}
+#CartBox .chosen button{
+    margin: 0 60px;
+    width: 150px;
+    height: 80px;
+}
