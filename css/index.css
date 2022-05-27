@@ -8,18 +8,53 @@
     padding: 0;
     /*background-color: black;*/
 }
+.container>#ShowBox{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
+    background-color: rgba(185, 185, 185, 0.24);
+}
+#ShowBox>*:nth-child(1){
+    flex: 1 1 auto;
+    text-align: center;
+}
+#ShowBox>*:nth-child(2){
+    flex: 4 4 auto;
+    text-align: center;
+}
+#ShowBox>*:nth-child(3){
+    flex: 1 1 auto;
+    text-align: center;
+}
 
+#ShowBox .turn{
+    color: white;
+    font-size: 200px;
+    border: white 1px solid;
+}
+#centershow .imgBox{
+    /*background-color: wheat;*/
+    width: 800px;
+    height: 640px;
+    margin: 40px auto;
+    border: gold solid 5px;
+}
+#centershow .imgBox>img{
+    height: 100%;
+}
 .content{
     width: 87.5%;
-    margin: 120px;
+    margin: 60px 120px;
     padding: 30px 0 90px;
     background-color: snow;
 }
 .content>.title{
     margin: 0 30px 0;
     padding: 30px;
-    border: black 1px solid;
+    border-bottom: black 1px solid;
     font-weight: bold;
     font-size: 40px;
     font-style: italic;
