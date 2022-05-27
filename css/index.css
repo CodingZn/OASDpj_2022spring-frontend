@@ -32,8 +32,12 @@
 
 #ShowBox .turn{
     color: white;
+    background-color: rgba(221, 221, 221, 0.25);
     font-size: 200px;
     border: white 1px solid;
+}
+#ShowBox .turn:hover{
+    background-color: rgba(221, 221, 221, 0.75);
 }
 #centershow .imgBox{
     /*background-color: wheat;*/
@@ -69,8 +73,11 @@
     display: flex;
     flex-flow: row nowrap;
 
-    background-color: rgba(245, 245, 220, 0.5);
+    background-color: rgba(245, 245, 220, 0.3);
 
+}
+.overview:hover{
+    background-color: rgba(245, 245, 220, 0.8);
 }
 .overview>.box1{
     width: 400px;
@@ -109,6 +116,11 @@
     font-size: 40px;
     color: blue;
 }
+.overview>.box2>.box21>.textbox:first-child p :hover{
+    color: darkred;
+    text-decoration: underline;
+    cursor: pointer;
+}
 .overview>.box2>.box22{
     height: 300px;
     display: flex;
@@ -144,6 +156,9 @@
 .overview>.box2>.box22>.box222>button{
     width: 120px;
     margin: 10px 10px 10px 80%;
+}
+.overview>.box2>.box22>.box222>button:hover{
+    cursor: pointer;
 }
 .overview:first-child{
     margin-top: 80px;

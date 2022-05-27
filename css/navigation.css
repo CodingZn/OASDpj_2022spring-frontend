@@ -7,14 +7,14 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    border: #b9b9b9 1px dotted;
+    /*border: #b9b9b9 1px dotted;*/
     display: flex;
 }
 #nav .block {
     height: 100%;
     margin: 0 auto;
     display: block;
-    border: black 1px solid;
+    /*border: black 1px solid;*/
 
 }
 #nav{
@@ -43,6 +43,9 @@ body{
     height: 90%;
     margin: auto;
 }
+#nav #logo:hover{
+    background-color: rgba(210, 189, 150, 0.5);
+}
 #nav #StoreName{
     max-height: 90%;
     margin: auto;
@@ -67,6 +70,9 @@ body{
 
     /*background-color: darkorange;*/
 }
+#nav .menu>.block:hover{
+    background-color: darkorange;
+}
 #nav .menu>.block:last-child{
     margin-right: 20px;
 }
@@ -82,6 +88,9 @@ body{
     margin: 0;
 
     /*background-color: darkorange;*/
+}
+#nav .menu>.list>.block:hover{
+    background-color: darkorange;
 }
 #NavFiller{
     width: 100%;
