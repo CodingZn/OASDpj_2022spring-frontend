@@ -9,13 +9,22 @@ window.onload = function (){
         alert("请先登录！");
         window.location.href = "../html/index.html";
     }
-    var button = document.getElementById("button1");
-    button.addEventListener("click", fun1);
+    var inputupload = document.getElementById('upload');
+    var uploadPic = document.getElementById('uploadPic');
 
-    function fun1(){
+    //上传图片预览
+    inputupload.addEventListener("change", function () {
+
+    })
+
+    var create_button = document.getElementById("create_button");
+    create_button.addEventListener("click", uploadForm);
+
+    function uploadForm(){
 
         var uploadPic = document.getElementById("uploadPic");
         var PicFile = uploadPic.files[0];
+
 
         uploadOnePicture(PicFile, "001702");
     }
