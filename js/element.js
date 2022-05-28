@@ -1,12 +1,12 @@
 import {PicBaseSrc} from "./vars.js";
 
-export function fillPaintingByInformation(paintingEle, Painting, mode){
-    if (mode == 'full'){
+export function fillPaintingByInformation(paintingEle, Painting, isfull){
+    if (isfull){
         paintingEle.getElementsByClassName('YearOfWork')[0].innerText=Painting.YearOfWork;
         paintingEle.getElementsByClassName('Width')[0].innerText=Painting.Width;
         paintingEle.getElementsByClassName('Height')[0].innerText=Painting.Height;
         paintingEle.getElementsByClassName('Medium')[0].innerText=Painting.Medium;
-        paintingEle.getElementsByClassName('UserName_create')[0].innerText=Painting.UserName_create;
+        // paintingEle.getElementsByClassName('UserName_create')[0].innerText=Painting.UserName_create;
 
     }
     let Genre = "";
@@ -29,6 +29,19 @@ export function fillPaintingByInformation(paintingEle, Painting, mode){
     paintingEle.getElementsByClassName('Description')[0].innerText=Painting.Description;
 
 
+}
+
+
+export function fillReviewByInformation(reviewEle, Review){
+    if (Review.UserName_create)
+        reviewEle.getElementsByClassName('UserName_create')[0].innerText=Review.UserName_create;
+    if (Review.CreateDateTime)
+        reviewEle.getElementsByClassName('CreateDateTime')[0].innerText=Review.CreateDateTime;
+    if (Review.Rating)
+        reviewEle.getElementsByClassName('Rating')[0].innerText=Review.Rating;
+    if (Review.Comment)
+        reviewEle.getElementsByClassName('Comment')[0].innerText=Review.Comment;
+    return reviewEle;
 }
 
 export function fillUserByInformation(userEle, Customer){

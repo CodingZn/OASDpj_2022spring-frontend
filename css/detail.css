@@ -39,7 +39,7 @@
     margin: 20px;
 }
 #detail>.box1>.box12 .block tr{
-    height: 75px;
+    height: 67px;
 
 }
 #detail>.box1>.box12 .block td{
@@ -95,10 +95,10 @@
     height: 200px;
 }
 #detail>.box6>.review:first-child{
-    margin: 40px;
+    margin: 40px 0 0;
 }
 #detail>.box6>.review:last-child{
-    margin: 40px;
+    margin: 0 0 40px;
 }
 #detail>.box6>.review>.box61{
     align-items: center;
