@@ -11,9 +11,20 @@ window.onload = function (){
         alert("请先登录！");
         window.location.href = "../html/index.html";
     }
-
-
     getAllinCart();
+
+    document.getElementById('checkout').addEventListener("click", function () {
+        var checkboxes = document.getElementById('CartBox').getElementsByTagName('input');
+        var checkbox_num = checkboxes.length;
+        for (let i=0; i<checkbox_num; i++){
+            console.log(checkboxes[i]);
+            if (checkboxes[i].checked){
+                console.log(checkboxes[i].parentElement.parentElement.title);
+            }
+        }
+        console.log(checkboxes);
+        // checkout(1);
+    })
 }
 
 function getAllinCart(){

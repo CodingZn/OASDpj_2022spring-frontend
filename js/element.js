@@ -48,7 +48,7 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
 
     if (paintingEle.getElementsByClassName('Description').length)
         paintingEle.getElementsByClassName('Description')[0].innerText=Painting.Description;
-
+    paintingEle.title = Painting.PaintingID;
 
 }
 
