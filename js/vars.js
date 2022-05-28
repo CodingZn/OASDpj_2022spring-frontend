@@ -1,4 +1,4 @@
-export const PicBaseSrc = "../works/"
+export const PicBaseSrc = "../../images/works/"
 export const DetailBaseSrc = "../html/detail.html"
 
 //review

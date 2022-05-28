@@ -92,8 +92,8 @@ function createAPainting(data){
 
         let input_upload = document.getElementById('uploadPic');
         var PicFile = input_upload.files[0];
-        type = type.substring(6);console.log(type);
-        uploadOnePicture(PicFile, ImageFileName, PaintingID, type);
+        type = type.substring(6);
+        uploadOnePicture(PicFile, ImageFileName, PaintingID);
     }
 
 }
@@ -114,10 +114,10 @@ function changeAPainting(data, PaintingID){
 
 }
 
-function uploadOnePicture(file, ImageFileName, PaintingID, Typename){
+function uploadOnePicture(file, ImageFileName, PaintingID){
     var url = "/release/upload.php";
     var par = {
-        ImageFileName : ImageFileName + Typename,
+        ImageFileName : ImageFileName,
         PaintingID : PaintingID
     };
     var query = Param.parseQueryString(par);

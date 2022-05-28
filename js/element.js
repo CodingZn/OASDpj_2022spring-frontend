@@ -31,12 +31,23 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
         paintingEle.getElementsByClassName('title_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Painting.PaintingID;
     }
 
-    paintingEle.getElementsByClassName('Image')[0].src=PicBaseSrc+ Painting.ImageFileName;//ImageFileName
-    paintingEle.getElementsByClassName('Popularity')[0].innerText=Painting.Popularity;
-    paintingEle.getElementsByClassName('ReleaseDate')[0].innerText=Painting.ReleaseDate;
-    paintingEle.getElementsByClassName('Genre')[0].innerText=Genre;
-    paintingEle.getElementsByClassName('Subject')[0].innerText=Subject;
-    paintingEle.getElementsByClassName('Description')[0].innerText=Painting.Description;
+    if (paintingEle.getElementsByClassName('Image').length)
+        paintingEle.getElementsByClassName('Image')[0].src=PicBaseSrc+ Painting.ImageFileName;//ImageFileName
+
+    if (paintingEle.getElementsByClassName('Popularity').length)
+        paintingEle.getElementsByClassName('Popularity')[0].innerText=Painting.Popularity;
+
+    if (paintingEle.getElementsByClassName('ReleaseDate').length)
+        paintingEle.getElementsByClassName('ReleaseDate')[0].innerText=Painting.ReleaseDate;
+
+    if (paintingEle.getElementsByClassName('Genre').length)
+        paintingEle.getElementsByClassName('Genre')[0].innerText=Genre;
+
+    if (paintingEle.getElementsByClassName('Subject').length)
+        paintingEle.getElementsByClassName('Subject')[0].innerText=Subject;
+
+    if (paintingEle.getElementsByClassName('Description').length)
+        paintingEle.getElementsByClassName('Description')[0].innerText=Painting.Description;
 
 
 }

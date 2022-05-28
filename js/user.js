@@ -87,14 +87,14 @@ function getMyPaintingsReleased(){
         var o = JSON.parse(jsontext);
 
         var paintings = o.paintings;
-        var paintings_num = paintings.length;
+        var paintings_num = paintings.length; console.log(paintings);
 
         var released_table = document.getElementById('released_table');
-        released_table.innerHTML = released_table_head.innerHTML;
+        released_table.innerHTML = released_table_head.innerHTML; console.log(released_table)
         for (let i=0; i<paintings_num; i++){
             var model = released_table_entry;
             fillPaintingByInformation(model, paintings[i]);
-            released_table.innerHTML = released_table.innerHTML + model.innerHTML;
+            released_table.innerHTML = released_table.innerHTML + model.innerHTML; console.log(released_table)
         }
 
     }
