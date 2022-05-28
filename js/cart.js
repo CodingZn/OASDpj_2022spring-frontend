@@ -16,14 +16,31 @@ window.onload = function (){
     document.getElementById('checkout').addEventListener("click", function () {
         var checkboxes = document.getElementById('CartBox').getElementsByTagName('input');
         var checkbox_num = checkboxes.length;
+        var list = [];
         for (let i=0; i<checkbox_num; i++){
-            console.log(checkboxes[i]);
             if (checkboxes[i].checked){
-                console.log(checkboxes[i].parentElement.parentElement.title);
+                list.push(checkboxes[i].parentElement.title);
             }
         }
-        console.log(checkboxes);
-        // checkout(1);
+        if(list.length === 0){
+            let a = confirm("是否购买所有购物车中的商品？");
+            if (a){
+                alert("已经购买");
+                checkout(1);
+            }
+        }
+        else {
+            let a = confirm("是否购买所有选中的商品？");
+            if (a){
+                var data = JSON.stringify({
+                    PaintingIDs: list
+                })
+                alert("已经购买");
+                checkout(0, data);
+            }
+
+        }
+
     })
 }
 

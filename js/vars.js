@@ -217,7 +217,7 @@ sold_table_entry.innerHTML = "<tr>\n" +
 //cart
 export const painting_cart = document.createElement("div");
 painting_cart.innerHTML = "<div class=\"overview cart\">\n" +
-    "\t\t\t\t\t<div class=\"checkbox box\">\n" +
+    "\t\t\t\t\t<div class=\"checkbox box checkbox_label\">\n" +
     "\t\t\t\t\t\t<input type=\"checkbox\">\n" +
     "\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t<div class=\"box1 box\"><a class=\"image_jump\">\n" +
