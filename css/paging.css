@@ -14,5 +14,7 @@
 }
 .content>.paging>.turn{
     border: black 1px solid;
-
+    display: inline-block;
+    background-color: #e8fcb9;
+    cursor: pointer;
 }

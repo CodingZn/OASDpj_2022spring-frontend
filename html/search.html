@@ -102,12 +102,11 @@
                 <select>
                     <option>Choose Subject</option>
                 </select>
-                <select>
-                    <option>Sort by</option>
-                    <option>Title</option>
-                    <option>Popularity</option>
-                    <option>Price</option>
-                    <option>ReleaseDate</option>
+                <select id="SearchOrderBy" title="Order By">
+                    <option value="Title">Title</option>
+                    <option value="Popularity">Popularity</option>
+                    <option value="Price">Price</option>
+                    <option value="ReleaseDate">ReleaseDate</option>
                 </select>
             </div>
             
@@ -184,12 +183,12 @@
                 </div>
             </div>
             <div class="box paging flexbox">
-                <span class="turn"> < </span>
+                <span class="turn" id="before_page"> < </span>
                 <span id="search_pageNo">1</span>
                 <span>| 共 </span>
                 <span id="totalPages">0</span>
                 <span>页</span>
-                <span class="turn"> > </span>
+                <span class="turn" id="next_page"> > </span>
             </div>
         </div>
     </div>

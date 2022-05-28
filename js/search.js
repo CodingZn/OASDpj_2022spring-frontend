@@ -6,11 +6,40 @@ import {fillPaintingByInformation} from "./element.js";
 import {loadLoginForm} from "./login.js";
 import {loadRegisterForm} from "./register.js"
 
+var totalpage_now = 1;
 window.onload = function (){
     loadNavigation();
     loadLoginForm();
     loadRegisterForm();
+    var now_page = 1;
     search('', '', '1', '10');
+
+    //搜索
+    document.getElementById('SearchButton').addEventListener("click", function () {
+        now_page = 1;
+        var text = document.getElementById('SearchText').value;
+        var orderby = document.getElementById('SearchOrderBy').value;
+        search(text, orderby, 1, 10);
+    });
+
+    //翻页
+    document.getElementById('next_page').addEventListener("click", function (){
+        if (now_page+1 < totalpage_now) {
+            now_page = now_page + 1;
+            var text = document.getElementById('SearchText').value;
+            var orderby = document.getElementById('SearchOrderBy').value;
+            search(text, orderby, now_page, 10);
+        }
+    })
+    document.getElementById('before_page').addEventListener("click", function (){
+        if (now_page>1) {
+            now_page = now_page - 1;
+            var text = document.getElementById('SearchText').value;
+            var orderby = document.getElementById('SearchOrderBy').value;
+            search(text, orderby, now_page, 10);
+        }
+    })
+
 }
 
 
@@ -50,7 +79,7 @@ function search(text, orderby, page, pagesize){
 
             //显示一共几页
             document.getElementById('totalPages').innerText = totalPages;
-
+            totalpage_now = totalPages;
 
         }
     }
