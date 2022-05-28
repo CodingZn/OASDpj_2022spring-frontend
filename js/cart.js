@@ -2,6 +2,8 @@ import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
+import {overviewElementModal} from "./vars.js";
+import {fillPaintingByInformation} from "./element.js";
 
 window.onload = function (){
     loadNavigation();
@@ -23,8 +25,16 @@ function getAllinCart(){
         var o = JSON.parse(jsontext);
 
         var paintings = o['paintings'];
+        var nums = paintings.length;
 
         if (xhr.status === 200){
+            var CartBoxEle = document.getElementById('CartBox');
+            if (nums > 0) CartBoxEle.innerHTML = "";
+            for (const painting of paintings) {
+                var model = overviewElementModal;
+                fillPaintingByInformation(model, painting);
+                CartBoxEle.innerHTML = CartBoxEle.innerHTML + model.innerHTML;
+            }
         }
         else {
         }
