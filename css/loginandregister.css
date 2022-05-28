@@ -1,59 +1,55 @@
-body{
-    margin:0;
-    padding: 0;
-    font-family: Serif;
-    background-color: #b9b9b9;
-}
-.inputbox{
-    width: 400px;
+.subWindow{
+    width: 960px;
     height: auto;
-    margin: 100px auto;
-    padding: 40px;
-    /*position: absolute;*/
-    /*left: 50%;*/
-    /*top: 50%;*/
-    /*transform: translate(-50%,-50%);*/
-    background: rgb(239, 239, 239);
+    border: #186cbd 2px solid;
+    margin: auto;
+    background-color: snow;
+}
+.subWindow{
+
+}
+.subWindow .FormTable{
+    width: 900px;
+    margin: 30px;
     text-align: center;
-    border-radius: 30px;
-}
-
-.inputbox .title{
-    color: #000000;
 
 }
-.inputbox .textbox{
-    text-align: center;
-    border: 2px solid #186cbd;
-    border-radius: 10px;
-    background: none;
-    display: block;
-    margin: 15px auto 5px;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: white;
+.subWindow .FormTable tr{
+    height: 60px;
 }
-.inputbox .button{
-    background: none;
-    width: 60px;
-    height: 35px;
-    border-radius :5px;
-
+.subWindow .FormTable tr:first-child{
+    height: 100px;
 }
-.inputbox p{
-    border-top: gray solid 1px;
-    padding-top: 35px;
-    position: relative;
-    top: 20px;
+.subWindow .FormTable td{
+    border: #b9b9b9 1px dotted;
 }
-.inputbox a{
-    margin: 50px;
+.subWindow .FormTable td:nth-child(1){
+    width: 20%;
 }
-.errorform, .errorblank{
-    font-size: small;
+.subWindow .FormTable td:nth-child(2){
+    width: 50%;
+}
+.subWindow .FormTable td:nth-child(3) {
+    width: 30%;
+    text-align: start;
+}
+.subWindow .FormTable td>input{
+    margin: 5px;
+    height: 30px;
+    width: 80%;
+}
+.subWindow .FormTable td:nth-child(3)>span{
     color: red;
-    margin-bottom: 15px;
-    display: none;
+    font-size: smaller;
+    padding: 0 20px;
 }
-
+.subWindow .FormTable td> button{
+    width: 200px;
+    height: 80px;
+    margin: 30px auto;
+}
+.subWindow .FormTable tr:last-child button{
+    width: 150px;
+    height: 60px;
+    margin: 30px 120px;
+}
