@@ -18,6 +18,29 @@ window.onload = function (){
     getPaintingDetail(PaintingID);
     getReviews(PaintingID);
 
+    //加入购物车
+    document.getElementById('add_to_cart').addEventListener("click", function () {
+        var data = JSON.stringify({
+            'PaintingID': PaintingID
+        })
+        addToCart(data);
+    })
+
+    //评论
+    document.getElementById('releaseComment').addEventListener("click", function () {
+        var comment = document.getElementById('commentText').value;
+        var data = JSON.stringify({
+            'PaintingID': PaintingID,
+            'Comment': comment
+        })
+        createReview(data);
+    })
+
+    //点赞
+    var reviewBoxEle = document.getElementById('reviewBox');
+    var likebuttons = reviewBoxEle.getElementsByClassName('likeIt');
+
+
 }
 
 //detail

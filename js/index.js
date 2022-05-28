@@ -43,7 +43,7 @@ function changeShowingPic(newNo){
     mainshow.src = PicBaseSrc + rolling5Pics[newNo].ImageFileName;
     //跳转
     var centor = document.getElementById('centershow');
-    var a = Array.from( centor.getElementsByClassName('image_jump')); console.log(rolling5Pics);
+    var a = Array.from( centor.getElementsByClassName('image_jump'));
     a[0].href = DetailBaseSrc + '?PaintingID='+ rolling5Pics[showingPictureNo].PaintingID;
 }
 

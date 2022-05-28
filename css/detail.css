@@ -63,7 +63,7 @@
     height: 50px;
     text-align: center;
     padding: 20px;
-
+    cursor: pointer;
     background-color: rgba(255, 0, 0, 0.63);
 }
 #detail>.box4>p>span{
@@ -115,12 +115,20 @@
     align-items: center;
 }
 #detail>.box6>.review>.box62>*:nth-child(1){
-    flex: 7 7 auto;
+    word-break: break-all;
+    flex: 7 7 0;
     padding: 0 30px;
 }
 #detail>.box6>.review>.box62>*:nth-child(2){
-    flex: 1 1 auto;
+    flex: 1 1 0;
 }
+#detail>.box6>.review>.box62>*:nth-child(2) button{
+    height: 45px;
+    width: 120px;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.35);
+}
+
 
 
 

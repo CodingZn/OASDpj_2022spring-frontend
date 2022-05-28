@@ -51,6 +51,7 @@ export function fillReviewByInformation(reviewEle, Review){
         reviewEle.getElementsByClassName('Rating')[0].innerText=Review.Rating;
     if (Review.Comment)
         reviewEle.getElementsByClassName('Comment')[0].innerText=Review.Comment;
+    reviewEle.value = Review.RatingID;
     return reviewEle;
 }
 
