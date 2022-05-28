@@ -1,6 +1,6 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
-import {Param} from "./util.js";
+import {Param, GetUrlParam} from "./util.js";
 import {setCookie} from "./cookie.js";
 import {fillPaintingByInformation, fillReviewByInformation} from "./element.js";
 import {reviewElementModal} from "./vars.js";
@@ -13,7 +13,7 @@ window.onload = function (){
     loadRegisterForm();
 
 
-    var PaintingID = '124';
+    var PaintingID = GetUrlParam('PaintingID');
 
     getPaintingDetail(PaintingID);
     getReviews(PaintingID);

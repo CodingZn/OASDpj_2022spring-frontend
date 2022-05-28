@@ -1,4 +1,4 @@
-import {PicBaseSrc} from "./vars.js";
+import {DetailBaseSrc, PicBaseSrc} from "./vars.js";
 
 export function fillPaintingByInformation(paintingEle, Painting, isfull){
     if (isfull){
@@ -21,6 +21,16 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
     paintingEle.getElementsByClassName('Title')[0].innerText=Painting.Title;
     paintingEle.getElementsByClassName('ArtistName')[0].innerText=Painting.ArtistName;
     paintingEle.getElementsByClassName('MSRP')[0].innerText=Painting.MSRP;
+    if (paintingEle.getElementsByClassName('image_jump').length){
+        paintingEle.getElementsByClassName('image_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Painting.PaintingID;
+    }
+    if (paintingEle.getElementsByClassName('button_jump').length){
+        paintingEle.getElementsByClassName('button_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Painting.PaintingID;
+    }
+    if (paintingEle.getElementsByClassName('title_jump').length){
+        paintingEle.getElementsByClassName('title_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Painting.PaintingID;
+    }
+
     paintingEle.getElementsByClassName('Image')[0].src=PicBaseSrc+ Painting.ImageFileName;//ImageFileName
     paintingEle.getElementsByClassName('Popularity')[0].innerText=Painting.Popularity;
     paintingEle.getElementsByClassName('ReleaseDate')[0].innerText=Painting.ReleaseDate;

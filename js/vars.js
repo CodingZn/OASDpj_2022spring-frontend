@@ -1,5 +1,5 @@
 export const PicBaseSrc = "../works/"
-
+export const DetailBaseSrc = "../html/detail.html"
 
 //review
 export const reviewElementModal = document.createElement("div");
@@ -32,17 +32,16 @@ reviewElementModal.innerHTML =
 //painting overview
 export const overviewElementModal = document.createElement("div");
 
-overviewElementModal.innerHTML =
-    "                <div class=\"overview home\">\n" +
-    "                    <div class=\"box1 box\">\n" +
+overviewElementModal.innerHTML = "<div class=\"overview home\">\n" +
+    "                    <div class=\"box1 box\"><a class=\"image_jump\">\n" +
     "                        <img src=\"../loading.gif\" class=\"Image\">\n" +
-    "                    </div>\n" +
+    "                    </a></div>\n" +
     "                    <div class=\"box2 box\">\n" +
     "                        <div class=\"box21 box\">\n" +
     "                            <div class=\"textbox\">\n" +
-    "                                <p>\n" +
+    "                                <p><a class=\"title_jump\">\n" +
     "                                    <span class=\"Title\">title</span>\n" +
-    "                                </p>\n" +
+    "                                </a></p>\n" +
     "                            </div>\n" +
     "                            <div class=\"textbox\">\n" +
     "                                <p>\n" +
@@ -94,12 +93,11 @@ overviewElementModal.innerHTML =
     "                            </div>\n" +
     "                            <div class=\"box222 box\">\n" +
     "                                <p class=\"Description\">There is no description for this painting.</p>\n" +
-    "                                <button class=\"ToDetail\"><p>DETAIL</p></button>\n" +
+    "                                <a class=\"button_jump\"><button class=\"ToDetail\"><p>DETAIL</p></button></a>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
-    "                </div>\n"
-
+    "                </div>";
 //order table
 export const order_table_head = document.createElement("tr");
 order_table_head.innerHTML = "<tr>\n" +

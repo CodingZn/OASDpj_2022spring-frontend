@@ -13,6 +13,13 @@ export const Param = {
     }
 }
 
+//获取url中的参数
+export function GetUrlParam(name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return unescape(r[2]); return null;
+}
+
 //获取指定form中的所有的<input>对象 (button除外
 function getInputElements(formId) {
     var form = document.getElementById(formId);

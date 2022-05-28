@@ -23,7 +23,7 @@
     border-right: #707070 2px solid;
 
 }
-.overview>.box1>img{
+.overview>.box1 img{
     height: 360px;
     width: 360px;
     margin: 20px;
@@ -89,11 +89,11 @@
 .overview>.box2>.box22>.box222>p{
     margin: 20px;
 }
-.overview>.box2>.box22>.box222>button{
+.overview>.box2>.box22>.box222 button{
     width: 120px;
     margin: 10px 10px 10px 80%;
 }
-.overview>.box2>.box22>.box222>button:hover{
+.overview>.box2>.box22>.box222 button:hover{
     cursor: pointer;
 }
 .overview:first-child{
