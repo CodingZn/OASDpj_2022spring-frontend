@@ -17,6 +17,17 @@ window.onload = function (){
     getMyPaintingsSold();
     getOrders();
 
+    document.getElementById('recharge').addEventListener("click", function () {
+        var amount;
+        amount = prompt("请输入充值金额","");
+        var conf = confirm("是否充值$" + amount + "?");
+        if (conf){
+            rechargeMoney(JSON.stringify({
+                amount : amount
+            }))
+        }
+    })
+
 }
 
 function getUserInfo(){

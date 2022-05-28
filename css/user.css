@@ -56,19 +56,19 @@
 #user>.box1 td:nth-child(2){
     width: 300px;
 }
-#user>.box1> button{
+#user>.box1 button{
     width: 100px;
     height: 50px;
     margin: 20px;
 }
-#user>.box1> .button{
+#user>.box1 .button{
     width: 200px;
     height: auto;
     text-align: center;
     padding: 10px;
     background-color: #c50000;
 }
-#user>.box1>p>span{
+#user>.box1 p>span{
     font-size: 40px;
 }
 #user>.box2{
