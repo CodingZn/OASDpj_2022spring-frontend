@@ -11,7 +11,9 @@ export function loadLoginForm(){
 
     //检查填写是否正确
     function checkLoginForm(){
-        return checkLoginUsername()&&checkLoginPassword();
+        let a = checkLoginUsername();
+        let b = checkLoginPassword();
+        return (a && b);
     }
 
     function checkLoginUsername(){
@@ -45,7 +47,10 @@ export function loadLoginForm(){
     loginButtonEle.addEventListener("click", getLoginForm, false);
 
     function getLoginForm() {
-        if (!checkLoginForm()) return;
+        if (!checkLoginForm()){
+            alert("请输入所有必填项！");
+            return ;
+        }
 
         let data = formToJson("LoginForm");
         login(data);
