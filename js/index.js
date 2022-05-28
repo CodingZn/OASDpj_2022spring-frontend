@@ -1,6 +1,6 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
-import {PicBaseSrc} from "./vars.js";
+import {DetailBaseSrc, PicBaseSrc} from "./vars.js";
 import {fillPaintingByInformation} from "./element.js";
 import {loadLoginForm} from "./login.js";
 import {loadRegisterForm} from "./register.js"
@@ -34,11 +34,17 @@ window.onload = function (){
 
     getPaintingSrcs();
 
+
+
 }
 
 //改变轮播图
 function changeShowingPic(newNo){
     mainshow.src = PicBaseSrc + rolling5Pics[newNo].ImageFileName;
+    //跳转
+    var centor = document.getElementById('centershow');
+    var a = Array.from( centor.getElementsByClassName('image_jump')); console.log(rolling5Pics);
+    a[0].href = DetailBaseSrc + '?PaintingID='+ rolling5Pics[showingPictureNo].PaintingID;
 }
 
 function getPaintingSrcs(){
