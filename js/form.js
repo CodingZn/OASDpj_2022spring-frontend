@@ -9,6 +9,13 @@
                 elements.push(inputElements[j]);
 
         }
+        var TextElements = form.getElementsByTagName('textarea');console.log(TextElements)
+        for (var k = 0; k < TextElements.length; k++){
+            if (TextElements[k].type !== 'submit')
+                elements.push(TextElements[k]);
+
+        }
+        console.log(elements)
         return elements;
     }
 

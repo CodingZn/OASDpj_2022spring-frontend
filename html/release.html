@@ -82,13 +82,13 @@
 			</div>
 			<div class="box" id="release">
 				<div class="box box1 flexbox">
-					<input type="file" class="block" id="uploadPic">
+					<input type="file" class="block" name="uploadPic" id="uploadPic">
 					<div class="block" id="pic">
 						<img src="../loading.gif" id="uploadPicShow">
 					</div>
 				</div>
 				<div class="box box2 flexbox">
-					<form>
+					<form id="info_form">
 						<table class="block">
 							<tr>
 								<td>
@@ -161,9 +161,9 @@
 								
 								</td>
 								<td>
-									<p>Weight</p>
+									<p>Width</p>
 									<p>
-										<input type="text" name="Weight">
+										<input type="text" name="Width">
 									</p>
 								
 								</td>
@@ -186,7 +186,7 @@
 								<td colspan="4">
 									<p>Description</p>
 									<p>
-										<textarea></textarea>
+										<textarea id="description" name="Description"></textarea>
 									</p>
 								
 								</td>
