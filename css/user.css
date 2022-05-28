@@ -82,12 +82,15 @@
 }
 #user>.box2 tr:first-child{
     height: 40px;
+    text-align: center;
 }
 #user>.box2 td{
     border: black 1px solid;
     text-align: center;
     width: 300px;
 }
-#user>.box2 .sold td:last-child{
+#user>.box2 .sold tr:not(:first-child) td:last-child{
     width: 600px;
+    text-align: start;
+    padding: 0 15px;
 }

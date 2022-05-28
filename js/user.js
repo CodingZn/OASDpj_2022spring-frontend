@@ -2,6 +2,9 @@ import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 import {checkUserCookie} from "./cookie.js";
+import {fillOrderByInformation, fillPaintingByInformation, fillUserByInformation} from "./element.js";
+import {order_table_head, order_table_entry, sold_table_head,
+    sold_table_entry, released_table_head, released_table_entry} from "./vars.js";
 
 window.onload = function (){
     loadNavigation();
@@ -10,7 +13,8 @@ window.onload = function (){
         window.location.href = "../html/index.html";
     }
     getUserInfo();
-    getMyPaintings('released');
+    getMyPaintingsReleased();
+    getMyPaintingsSold();
     getOrders();
 
 }
@@ -25,6 +29,9 @@ function getUserInfo(){
         var o = JSON.parse(jsontext);
 
         var user = o.user;
+
+        var UserInfoTableEle = document.getElementById('UserInfoTable');
+        fillUserByInformation(UserInfoTableEle, user);
 
 
     }
@@ -56,14 +63,22 @@ function getOrders(){
         var o = JSON.parse(jsontext);
 
         var orderList = o.orderList;
+        var order_num = orderList.length;
 
+        var order_table = document.getElementById('order_table');
+        order_table.innerHTML = order_table_head.innerHTML;
+        for (let i=0; i<order_num; i++){
+            var model = order_table_entry;
+            fillOrderByInformation(model, orderList[i]);
+            order_table.innerHTML = order_table.innerHTML + model.innerHTML;
+        }
 
     }
 }
 
-function getMyPaintings(type){
+function getMyPaintingsReleased(){
     var url = "/user/myPainting.php";
-    var par = {type : type};
+    var par = {type : 'released'};
     var query = Param.parseQueryString(par);
     Ajax.get(url+query, callback);
 
@@ -72,7 +87,41 @@ function getMyPaintings(type){
         var o = JSON.parse(jsontext);
 
         var paintings = o.paintings;
+        var paintings_num = paintings.length;
 
+        var released_table = document.getElementById('released_table');
+        released_table.innerHTML = released_table_head.innerHTML;
+        for (let i=0; i<paintings_num; i++){
+            var model = released_table_entry;
+            fillPaintingByInformation(model, paintings[i]);
+            released_table.innerHTML = released_table.innerHTML + model.innerHTML;
+        }
+
+    }
+
+}
+
+function getMyPaintingsSold(){
+    var url = "/user/myPainting.php";
+    var par = {type : 'sold'};
+    var query = Param.parseQueryString(par);
+    Ajax.get(url+query, callback);
+
+    function callback(xhr){
+        var jsontext = xhr.responseText;
+        var o = JSON.parse(jsontext);
+
+        var orders_sold = o.orders;
+        var orders_sold_num = orders_sold.length;
+
+        var sold_table = document.getElementById('sold_table');
+        sold_table.innerHTML = sold_table_head.innerHTML;
+        for (let i=0; i<orders_sold_num; i++){
+            var model = sold_table_entry;
+            fillPaintingByInformation(model, orders_sold[i].Painting);
+            fillUserByInformation(model, orders_sold[i].Customer)
+            sold_table.innerHTML = sold_table.innerHTML + model.innerHTML;
+        }
 
     }
 

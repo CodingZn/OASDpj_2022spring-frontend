@@ -23,7 +23,7 @@ export function getCookie(cname)
 export function checkUserCookie(){
     var CustomerID = getCookie("CustomerID");
     if (CustomerID!=""){
-        return user;
+        return CustomerID;
     }
     else {
         return false;

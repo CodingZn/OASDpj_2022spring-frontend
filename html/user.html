@@ -85,7 +85,7 @@
 					<p class="title">
 						个人信息
 					</p>
-					<table class="block">
+					<table class="block" id="UserInfoTable">
 						<tr>
 							<td>
 								UserName
@@ -133,7 +133,7 @@
 				</div>
 				<div class="box2">
 					<p class="title">我的订单>>></p>
-					<table class="order block">
+					<table class="order block" id="order_table">
 						<tr>
 							<td>
 								OrderID
@@ -170,7 +170,7 @@
 						</tr>
 					</table>
 					<p class="title">我发布的艺术品>>></p>
-					<table class="released block">
+					<table class="released block" id="released_table">
 						<tr>
 							<td>
 								PaintingID
@@ -190,16 +190,16 @@
 						</tr>
 						<tr>
 							<td>
-								<span class="PaintingID">PaintingID</span>
+								<span class="PaintingID">unknown</span>
 							</td>
 							<td>
-								<span class="Title">Title</span>
+								<span class="Title">unknown</span>
 							</td>
 							<td>
-								<span class="ArtistName">ArtistName</span>
+								<span class="ArtistName">Anonymous</span>
 							</td>
 							<td>
-								<span class="MSRP">MSRP</span>
+								<span class="MSRP">unknown</span>
 							</td>
 							<td>
 								<button>Change</button>
@@ -208,7 +208,7 @@
 						</tr>
 					</table>
 					<p class="title">我卖出的艺术品>>></p>
-					<table class="sold block">
+					<table class="sold block" id="sold_table">
 						<tr>
 							<td>
 								Title
@@ -225,19 +225,19 @@
 						</tr>
 						<tr>
 							<td>
-								<span class="Title">Title</span>
+								<span class="Title">unknown</span>
 							</td>
 							<td>
-								<span class="DateCreated">DateCreated</span>
+								<span class="DateCreated">There is no DateCreated.</span>
 							</td>
 							<td>
-								<span class="MSRP">Price</span>
+								<span class="MSRP">unknown</span>
 							</td>
 							<td>
-								<span class="UserName">buyername</span><br/>
-								<span class="Email">buyername</span><br/>
-								<span class="Address">buyername</span><br/>
-								<span class="Phone">buyername</span>
+								UserName:<span class="UserName">unknown</span><br/>
+								Email:<span class="Email">unknown</span><br/>
+								Address:<span class="Address">unknown</span><br/>
+								Phone:   <span class="Phone">unknown</span>
 							</td>
 						</tr>
 					</table>

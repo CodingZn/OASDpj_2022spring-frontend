@@ -45,10 +45,31 @@ export function fillReviewByInformation(reviewEle, Review){
 }
 
 export function fillUserByInformation(userEle, Customer){
-    userEle.getElementsByClassName('CustomerID').innerText = Customer.CustomerID;
-    userEle.getElementsByClassName('UserName').innerText = Customer.UserName;
-    userEle.getElementsByClassName('Email').innerText = Customer.Email;
-    userEle.getElementsByClassName('Address').innerText = Customer.Address;
-    userEle.getElementsByClassName('Phone').innerText = Customer.Phone;
-    userEle.getElementsByClassName('UserAccount').innerText = Customer.UserAccount;
+    if (userEle.getElementsByClassName('UserName') &&  Customer.UserName)
+        userEle.getElementsByClassName('UserName')[0].innerText = Customer.UserName;
+
+    if (userEle.getElementsByClassName('Email') &&  Customer.Email)
+        userEle.getElementsByClassName('Email')[0].innerText = Customer.Email;
+
+    if (userEle.getElementsByClassName('Address') &&  Customer.Address)
+        userEle.getElementsByClassName('Address')[0].innerText = Customer.Address;
+
+    if (userEle.getElementsByClassName('Phone') &&  Customer.Phone)
+        userEle.getElementsByClassName('Phone')[0].innerText = Customer.Phone;
+
+    if (userEle.getElementsByClassName('UserAccount') &&  Customer.UserAccount)
+        userEle.getElementsByClassName('UserAccount')[0].innerText = Customer.UserAccount;
+}
+
+export function fillOrderByInformation(orderEle, Order){
+    if (orderEle.getElementsByClassName('OrderID') && Order.OrderID)
+        orderEle.getElementsByClassName('OrderID')[0].innerText = Order.OrderID;
+    if (orderEle.getElementsByClassName('DateCreated') && Order.OrderID)
+        orderEle.getElementsByClassName('DateCreated')[0].innerText = Order.DateCreated;
+    if (orderEle.getElementsByClassName('Title') && Order.Painting.Title)
+        orderEle.getElementsByClassName('Title')[0].innerText = Order.Painting.Title;
+    if (orderEle.getElementsByClassName('ArtistName') && Order.Painting.ArtistName)
+        orderEle.getElementsByClassName('ArtistName')[0].innerText = Order.Painting.ArtistName;
+    if (orderEle.getElementsByClassName('MSRP') && Order.Painting.MSRP)
+        orderEle.getElementsByClassName('MSRP')[0].innerText = Order.Painting.MSRP;
 }
