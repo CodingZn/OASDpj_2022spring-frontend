@@ -1,37 +1,37 @@
 import {Ajax} from "./ajax.js";
 import {formCheck, formToJson, formToObj, checkOneForm} from "./form.js";
 
-window.onload = function (){
-    var button = document.getElementById("button");
-    button.addEventListener("click", submit, false);
+export function loadRegisterForm(){
+    var button = document.getElementById("RegisterButton");
+    button.addEventListener("click", getRegisterForm, false);
 
-    var username = document.getElementById("username");
+    var username = document.getElementById("register_username");
     username.addEventListener("keyup", checkUsername);
     username.addEventListener("click", checkUsername);
 
-    var phone = document.getElementById("phone");
+    var phone = document.getElementById("register_phone");
     phone.addEventListener("keyup", checkPhone);
     phone.addEventListener("click", checkPhone);
 
-    var address = document.getElementById("address");
+    var address = document.getElementById("register_address");
     address.addEventListener("keyup", checkAddress);
     address.addEventListener("click", checkAddress);
 
-    var email = document.getElementById("email");
+    var email = document.getElementById("register_email");
     email.addEventListener("keyup", checkEmail);
     email.addEventListener("click", checkEmail);
 
-    var password = document.getElementById("password");
+    var password = document.getElementById("register_password");
     password.addEventListener("keyup", checkPassword);
     password.addEventListener("click", checkPassword);
 
-    var password2 = document.getElementById("password2");
+    var password2 = document.getElementById("register_password2");
     password2.addEventListener("keyup", checkPassword2);
     password2.addEventListener("click", checkPassword2);
 
 }
 
-function submit(){
+function getRegisterForm(){
     if (!checkDataFormats())
         alert("信息格式有误！请改正后提交！");
     else {
@@ -67,75 +67,75 @@ function checkDataFormats(){
 }
 
 function checkUsername(){
-    let element = document.getElementById("username");
+    let element = document.getElementById("register_username");
     if (element.value == null || element.value === "")
-        document.getElementById("usernameBlank").style.display = "inline";
+        document.getElementById("register_username_blank").style.display = "inline";
     else if (element.value.match("[^(0-9A-Za-z-_)]+")){
-        document.getElementById("usernameBlank").style.display = "none";
-        document.getElementById("usernameErrForm").style.display = "inline";
+        document.getElementById("register_username_blank").style.display = "none";
+        document.getElementById("register_username_error").style.display = "inline";
     }
     else{
-        document.getElementById("usernameBlank").style.display = "none";
-        document.getElementById("usernameErrForm").style.display = "none";
+        document.getElementById("register_username_blank").style.display = "none";
+        document.getElementById("register_username_error").style.display = "none";
         return true;
     }
     return false;
 }
 
 function checkPhone(){
-    let element = document.getElementById("phone");
+    let element = document.getElementById("register_phone");
     if (element.value == null || element.value === "")
-        document.getElementById("phoneBlank").style.display = "inline";
+        document.getElementById("register_phone_blank").style.display = "inline";
     else if (!element.value.match("[0-9]+")){
-        document.getElementById("phoneBlank").style.display = "none";
-        document.getElementById("phoneErrForm").style.display = "inline";
+        document.getElementById("register_phone_blank").style.display = "none";
+        document.getElementById("register_phone_error").style.display = "inline";
     }
     else{
-        document.getElementById("phoneBlank").style.display = "none";
-        document.getElementById("phoneErrForm").style.display = "none";
+        document.getElementById("register_phone_blank").style.display = "none";
+        document.getElementById("register_phone_error").style.display = "none";
         return true;
     }
     return false;
 }
 
 function checkAddress(){
-    let element = document.getElementById("address");
+    let element = document.getElementById("register_address");
     if (element.value == null || element.value === "")
-        document.getElementById("addressBlank").style.display = "inline";
+        document.getElementById("register_address_blank").style.display = "inline";
     else{
-        document.getElementById("addressBlank").style.display = "none";
+        document.getElementById("register_address_blank").style.display = "none";
         return true;
     }
     return false;
 }
 
 function checkEmail(){
-    let element = document.getElementById("email");
+    let element = document.getElementById("register_email");
     if (element.value == null || element.value === "")
-        document.getElementById("emailBlank").style.display = "inline";
-    else if (!element.value.match("^\\w+@[a-z0-9]+.[a-z]{2,4}$")){
-        document.getElementById("emailBlank").style.display = "none";
-        document.getElementById("emailErrForm").style.display = "inline";
+        document.getElementById("register_email_blank").style.display = "inline";
+    else if (!element.value.match("^\\s*\\w+(?:\\.{0,1}[\\w-]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$")){
+        document.getElementById("register_email_blank").style.display = "none";
+        document.getElementById("register_email_error").style.display = "inline";
     }
     else{
-        document.getElementById("emailBlank").style.display = "none";
-        document.getElementById("emailErrForm").style.display = "none";
+        document.getElementById("register_email_blank").style.display = "none";
+        document.getElementById("register_email_error").style.display = "none";
         return true;
     }
     return false;
 }
 
 function checkPassword(){
-    let element = document.getElementById("password");
+    let element = document.getElementById("register_password");
     if (element.value == null || element.value === "")
-        document.getElementById("passwordBlank").style.display = "inline";
+        document.getElementById("register_password_blank").style.display = "inline";
     else if (!checkpasswordformat(element.value)){
-        document.getElementById("passwordBlank").style.display = "none";
-        document.getElementById("passwordErrForm").style.display = "inline";
+        document.getElementById("register_password_blank").style.display = "none";
+        document.getElementById("register_password_error").style.display = "inline";
     }
     else{
-        document.getElementById("passwordBlank").style.display = "none";
-        document.getElementById("passwordErrForm").style.display = "none";
+        document.getElementById("register_password_blank").style.display = "none";
+        document.getElementById("register_password_error").style.display = "none";
         return true;
     }
     return false;
@@ -146,14 +146,14 @@ function checkPassword2(){
     if (element.value == null || element.value === "")
         document.getElementById("password2Blank").style.display = "inline";
     else{
-        let value1 = document.getElementById("password").value;
+        let value1 = document.getElementById("register_password2").value;
         if (value1 !== element.value){
-            document.getElementById("password2ErrForm").style.display = "inline";
-            document.getElementById("password2Blank").style.display = "none";
+            document.getElementById("register_password2_error").style.display = "inline";
+            document.getElementById("register_password2_blank").style.display = "none";
         }
         else{
-            document.getElementById("password2Blank").style.display = "none";
-            document.getElementById("password2ErrForm").style.display = "none";
+            document.getElementById("register_password2_blank").style.display = "none";
+            document.getElementById("register_password2_error").style.display = "none";
             return true;
         }
     }

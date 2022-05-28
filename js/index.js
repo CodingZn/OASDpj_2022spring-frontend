@@ -4,6 +4,7 @@ import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
 import {PicBaseSrc} from "./vars.js";
 import {fillPaintingByInformation} from "./element.js";
 import {loadLoginForm} from "./login.js";
+import {loadRegisterForm} from "./register.js"
 
 var showingPictureNo = 0;
 var rolling5Pics;
@@ -11,6 +12,7 @@ var rolling5Pics;
 window.onload = function (){
     loadNavigation();
     loadLoginForm();
+    loadRegisterForm();
 
     //点击轮播图
     var mainshow = document.getElementById("mainshow");
