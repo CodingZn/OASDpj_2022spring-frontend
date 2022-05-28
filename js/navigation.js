@@ -32,6 +32,7 @@ export function loadNavigation(){
         menu_auth.style.display = "none";
     }
     //跳转
+    document.getElementById("logo").addEventListener("click", jump_index);
     document.getElementById("jump_index").addEventListener("click", jump_index);
     document.getElementById("jump_index2").addEventListener("click", jump_index);
     document.getElementById("jump_search").addEventListener("click", jump_search);
