@@ -217,5 +217,77 @@ sold_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t</tr>";
 
 //??
-export const sold = document.createElement("tr");
-sold.innerHTML = "";
+export const painting_cart = document.createElement("div");
+painting_cart.innerHTML = "<div class=\"overview cart\">\n" +
+    "\t\t\t\t\t<div class=\"checkbox box\">\n" +
+    "\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+    "\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t<div class=\"box1 box\">\n" +
+    "\t\t\t\t\t\t<img src=\"../loading.gif\" class=\"Image\">\n" +
+    "\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t<div class=\"box2 box\">\n" +
+    "\t\t\t\t\t\t<div class=\"box21 box\">\n" +
+    "\t\t\t\t\t\t\t<div class=\"textbox\">\n" +
+    "\t\t\t\t\t\t\t\t<p>\n" +
+    "\t\t\t\t\t\t\t\t\t<span class=\"Title\">title</span>\n" +
+    "\t\t\t\t\t\t\t\t</p>\n" +
+    "\t\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t\t<div class=\"textbox\">\n" +
+    "\t\t\t\t\t\t\t\t<p>\n" +
+    "\t\t\t\t\t\t\t\t\t<span class=\"ArtistName\">artist name</span>\n" +
+    "\t\t\t\t\t\t\t\t</p>\n" +
+    "\t\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t\t<div class=\"textbox\">\n" +
+    "\t\t\t\t\t\t\t\t<p>\n" +
+    "\t\t\t\t\t\t\t\t\t<span class=\"MSRP\">price</span>\n" +
+    "\t\t\t\t\t\t\t\t</p>\n" +
+    "\t\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t<div class=\"box22 box\">\n" +
+    "\t\t\t\t\t\t\t<div class=\"box221 box\">\n" +
+    "\t\t\t\t\t\t\t\t<table class=\"OptionalInfo\">\n" +
+    "\t\t\t\t\t\t\t\t\t<tr>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span>ReleaseDate</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span class=\"ReleaseDate\">value1</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t</tr>\n" +
+    "\t\t\t\t\t\t\t\t\t<tr>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span>Popularity</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span class=\"Popularity\">value1</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t</tr>\n" +
+    "\t\t\t\t\t\t\t\t\t<tr>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span>Genre</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span class=\"Genre\">value1</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t</tr>\n" +
+    "\t\t\t\t\t\t\t\t\t<tr>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span>Subject</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t\t\t\t<span class=\"Subject\">value1</span>\n" +
+    "\t\t\t\t\t\t\t\t\t\t</td>\n" +
+    "\t\t\t\t\t\t\t\t\t</tr>\n" +
+    "\t\t\t\t\t\t\t\t</table>\n" +
+    "\t\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t\t<div class=\"box222 box\">\n" +
+    "\t\t\t\t\t\t\t\t<p class=\"Description\">texttexttexttexttexttexttexttexttexttexttexttext</p>\n" +
+    "\t\t\t\t\t\t\t\t<div class=\"buttons_box flexbox block\">\n" +
+    "\t\t\t\t\t\t\t\t\t<button><p>BUY NOW</p></button>\n" +
+    "\t\t\t\t\t\t\t\t\t<button><p>DELETE</p></button>\n" +
+    "\t\t\t\t\t\t\t\t\t<button class=\"ToDetail\"><p>DETAIL</p></button>\n" +
+    "\t\t\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t</div>\n" +
+    "\t\t\t\t</div>\n";

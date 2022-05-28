@@ -2,7 +2,7 @@ import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
-import {overviewElementModal} from "./vars.js";
+import {overviewElementModal, painting_cart} from "./vars.js";
 import {fillPaintingByInformation} from "./element.js";
 
 window.onload = function (){
@@ -11,6 +11,7 @@ window.onload = function (){
         alert("请先登录！");
         window.location.href = "../html/index.html";
     }
+
 
     console.log(document.cookie);
     getAllinCart();
@@ -31,10 +32,11 @@ function getAllinCart(){
             var CartBoxEle = document.getElementById('CartBox');
             if (nums > 0) CartBoxEle.innerHTML = "";
             for (const painting of paintings) {
-                var model = overviewElementModal;
+                var model = painting_cart;
                 fillPaintingByInformation(model, painting);
                 CartBoxEle.innerHTML = CartBoxEle.innerHTML + model.innerHTML;
             }
+            document.getElementById('cart_total').innerText = nums;
         }
         else {
         }
