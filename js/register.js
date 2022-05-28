@@ -139,10 +139,23 @@ export function loadRegisterForm(){
         else if (!checkpasswordformat(element.value)){
             document.getElementById("register_password_blank").style.display = "none";
             document.getElementById("register_password_error").style.display = "inline";
+            document.getElementById("passwordstrong").style.display = "none";
         }
         else{
             document.getElementById("register_password_blank").style.display = "none";
             document.getElementById("register_password_error").style.display = "none";
+            document.getElementById("passwordstrong").style.display = "inline";
+            var level = document.getElementById("passwordstrong");
+
+            if (element.value.length>=6 && element.value.length<=10){
+                level.setAttribute("src", "../weak.png");
+            }
+            else if (element.value.length>=11 && element.value.length<=16){
+                level.setAttribute("src", "../medium.png");
+            }
+            else if (element.value.length>=17 && element.value.length<=32){
+                level.src = "../strong.png";
+            }
             return true;
         }
         return false;
@@ -167,7 +180,7 @@ export function loadRegisterForm(){
         return false;
     }
 
-    function checkpasswordformat(value){console.log(value);
+    function checkpasswordformat(value){
         if (value.length < 6) return false;
         let i=0, j=0;
         if (value.match("[0-9]+") != null) i++;
