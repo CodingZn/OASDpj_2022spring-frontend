@@ -15,21 +15,31 @@ export function loadNavigation(){
         var user_manu_listEle = document.getElementById('user_manu_list');
         user_manu_listEle.addEventListener("mouseover", function (){
             let divs = user_manu_listEle.getElementsByTagName("div");
-            for (let div of divs){console.log(div);
+            for (let div of divs){
                 div.style.display = "block";
             }
         })
         user_manu_listEle.addEventListener("mouseleave", function (){
             let divs = user_manu_listEle.getElementsByTagName("div");
-            for (let div of divs){console.log(div);
+            for (let div of divs){
                 div.style.display = "none";
             }
             document.getElementById('user_manu').style.display = 'block';
         })
+        document.getElementById("jump_user").addEventListener("click", jump_user);
+        document.getElementById("jump_cart").addEventListener("click", jump_cart);
+        document.getElementById("jump_release").addEventListener("click", jump_release);
     }
     else {//visitor
         menu_unauth.style.display = "flex";
         menu_auth.style.display = "none";
+
+        document.getElementById("jump_login").addEventListener("click", into_login);
+        document.getElementById("into_login").addEventListener("click", into_login);
+        document.getElementById("exit_login").addEventListener("click", exit_subWindow);
+        document.getElementById("exit_register").addEventListener("click", exit_subWindow);
+        document.getElementById("jump_register").addEventListener("click", into_register);
+        document.getElementById("into_register").addEventListener("click", into_register);
     }
     //跳转
     document.getElementById("logo").addEventListener("click", jump_index);
@@ -39,15 +49,7 @@ export function loadNavigation(){
     document.getElementById("jump_search2").addEventListener("click", jump_search);
     document.getElementById("jump_detail").addEventListener("click", jump_detail);
     document.getElementById("jump_detail2").addEventListener("click", jump_detail);
-    document.getElementById("jump_login").addEventListener("click", into_login);
-    document.getElementById("into_login").addEventListener("click", into_login);
-    document.getElementById("exit_login").addEventListener("click", exit_subWindow);
-    document.getElementById("exit_register").addEventListener("click", exit_subWindow);
-    document.getElementById("jump_register").addEventListener("click", into_register);
-    document.getElementById("into_register").addEventListener("click", into_register);
-    document.getElementById("jump_user").addEventListener("click", jump_user);
-    document.getElementById("jump_cart").addEventListener("click", jump_cart);
-    document.getElementById("jump_release").addEventListener("click", jump_release);
+
 
     function jump_index(){window.location.href="../html/index.html"}
     function jump_search(){window.location.href="../html/search.html"}
@@ -76,7 +78,8 @@ export function loadNavigation(){
 
 function logout(){
     alert("退出登录！");
-    setCookie("user", null, -1);alert(11);
-    setCookie("username", null, -1);alert(22);
-    // window.location.reload();
+    setCookie("CustomerID", null, -1);
+    setCookie("token", null, -1);
+    setCookie("username", null, -1);
+    window.location.href="../html/index.html";
 }
