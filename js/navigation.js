@@ -24,8 +24,12 @@ export function loadNavigation(){
     document.getElementById("jump_search2").addEventListener("click", jump_search);
     document.getElementById("jump_detail").addEventListener("click", jump_detail);
     document.getElementById("jump_detail2").addEventListener("click", jump_detail);
-    document.getElementById("jump_login").addEventListener("click", jump_login);
-    document.getElementById("jump_register").addEventListener("click", jump_register);
+    document.getElementById("jump_login").addEventListener("click", into_login);
+    document.getElementById("into_login").addEventListener("click", into_login);
+    document.getElementById("exit_login").addEventListener("click", exit_subWindow);
+    document.getElementById("exit_register").addEventListener("click", exit_subWindow);
+    document.getElementById("jump_register").addEventListener("click", into_register);
+    document.getElementById("into_register").addEventListener("click", into_register);
     document.getElementById("jump_user").addEventListener("click", jump_user);
     document.getElementById("jump_cart").addEventListener("click", jump_cart);
     document.getElementById("jump_release").addEventListener("click", jump_release);
@@ -33,8 +37,19 @@ export function loadNavigation(){
     function jump_index(){window.location.href="../html/index.html"}
     function jump_search(){window.location.href="../html/search.html"}
     function jump_detail(){window.location.href="../html/detail.html"}
-    function jump_login(){window.location.href="../html/login.html"}
-    function jump_register(){window.location.href="../html/register.html"}
+    function into_login(){
+        document.getElementById('LoginWindow').style.display = 'block';
+        document.getElementById('RegisterWindow').style.display = 'none';
+    }
+    function into_register(){
+        document.getElementById('LoginWindow').style.display = 'none';
+        document.getElementById('RegisterWindow').style.display = 'block';
+    }
+    function exit_subWindow(){
+        window.location.href="../html/index.html";
+        document.getElementById('LoginWindow').style.display = 'none';
+        document.getElementById('RegisterWindow').style.display = 'none';
+    }
     function jump_user(){window.location.href="../html/user.html"}
     function jump_cart(){window.location.href="../html/cart.html"}
     function jump_release(){window.location.href="../html/release.html"}
