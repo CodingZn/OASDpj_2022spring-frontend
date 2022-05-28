@@ -4,9 +4,13 @@ import {Param} from "./util.js";
 import {setCookie} from "./cookie.js";
 import {fillPaintingByInformation, fillReviewByInformation} from "./element.js";
 import {reviewElementModal} from "./vars.js";
+import {loadLoginForm} from "./login.js";
+import {loadRegisterForm} from "./register.js"
 
 window.onload = function (){
     loadNavigation();
+    loadLoginForm();
+    loadRegisterForm();
 
 
     var PaintingID = '124';

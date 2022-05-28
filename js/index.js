@@ -1,6 +1,5 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
-import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
 import {PicBaseSrc} from "./vars.js";
 import {fillPaintingByInformation} from "./element.js";
 import {loadLoginForm} from "./login.js";

@@ -3,9 +3,13 @@ import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 import {overviewElementModal} from "./vars.js";
 import {fillPaintingByInformation} from "./element.js";
+import {loadLoginForm} from "./login.js";
+import {loadRegisterForm} from "./register.js"
 
 window.onload = function (){
     loadNavigation();
+    loadLoginForm();
+    loadRegisterForm();
     search('', '', '1', '10');
 }
 
