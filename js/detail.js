@@ -3,6 +3,7 @@ import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
 import {setCookie} from "./cookie.js";
 import {fillPaintingByInformation, fillReviewByInformation} from "./element.js";
+import {reviewElementModal} from "./vars.js";
 
 window.onload = function (){
     loadNavigation();
@@ -43,34 +44,6 @@ function getPaintingDetail(PaintingID){
     }
 
 }
-
-//review
-var reviewElementModal = document.createElement("div");
-
-reviewElementModal.innerHTML =
-    "                   <div class=\"review block Review\" > " +
-    "                        <div class=\"box flexbox box61\">\n" +
-    "                            <div class=\"textbox\">\n" +
-    "                                <span class=\"UserName_create\">Anonymous</span>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"textbox\">\n" +
-    "                            </div>\n" +
-    "                            <div class=\"textbox\">\n" +
-    "                                <span class=\"CreateDateTime\">There is no comment date</span>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"textbox\">\n" +
-    "                                <span class=\"Rating\">unknown</span>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"box flexbox box62\">\n" +
-    "                            <div class=\"textbox\">\n" +
-    "                                <p><span class=\"Comment\">There is no content.</span></p>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"textbox\">\n" +
-    "                                <p><span>Like The Review</span></p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n"
 
 
 function getReviews(PaintingID){

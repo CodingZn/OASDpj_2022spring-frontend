@@ -16,7 +16,7 @@
 <div class="container">
     <div id="nav">
         <div class="box">
-            <img src="../images/logo1.png" id="logo" class="block">
+            <img src="../logo1.png" id="logo" class="block">
         </div>
         <div class="box">
             <div class="block">
@@ -103,6 +103,10 @@
                 </select>
                 <select>
                     <option>Sort by</option>
+                    <option>Title</option>
+                    <option>Popularity</option>
+                    <option>Price</option>
+                    <option>ReleaseDate</option>
                 </select>
             </div>
             
@@ -110,7 +114,7 @@
                 Result >>>
             </p>
             
-            <div class="box box4">
+            <div class="box box4" id="searchResultBox">
                 <div class="overview home">
                     <div class="box1 box">
                         <img src="../loading.gif" class="Image">
@@ -180,7 +184,10 @@
             </div>
             <div class="box paging flexbox">
                 <span class="turn"> < </span>
-                <span> 1 </span>
+                <span id="search_pageNo">1</span>
+                <span>| 共 </span>
+                <span id="totalPages">0</span>
+                <span>页</span>
                 <span class="turn"> > </span>
             </div>
         </div>
