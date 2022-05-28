@@ -1,9 +1,14 @@
 import {Ajax} from "./ajax.js";
 import {loadNavigation} from "./navigation.js";
 import {Param} from "./util.js";
+import {checkUserCookie} from "./cookie.js";
 
 window.onload = function (){
     loadNavigation();
+    if (!checkUserCookie()){
+        alert("请先登录！");
+        window.location.href = "../html/index.html";
+    }
     getUserInfo();
     getMyPaintings('released');
     getOrders();

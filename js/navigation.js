@@ -34,12 +34,14 @@ export function loadNavigation(){
         menu_unauth.style.display = "flex";
         menu_auth.style.display = "none";
 
-        document.getElementById("jump_login").addEventListener("click", into_login);
-        document.getElementById("into_login").addEventListener("click", into_login);
-        document.getElementById("exit_login").addEventListener("click", exit_subWindow);
-        document.getElementById("exit_register").addEventListener("click", exit_subWindow);
-        document.getElementById("jump_register").addEventListener("click", into_register);
-        document.getElementById("into_register").addEventListener("click", into_register);
+        if (document.getElementById("LoginWindow")){
+            document.getElementById("jump_login").addEventListener("click", into_login);
+            document.getElementById("into_login").addEventListener("click", into_login);
+            document.getElementById("exit_login").addEventListener("click", exit_subWindow);
+            document.getElementById("exit_register").addEventListener("click", exit_subWindow);
+            document.getElementById("jump_register").addEventListener("click", into_register);
+            document.getElementById("into_register").addEventListener("click", into_register);
+        }
     }
     //跳转
     document.getElementById("logo").addEventListener("click", jump_index);
@@ -74,12 +76,11 @@ export function loadNavigation(){
     var logoutEle = document.getElementById("quit");
     logoutEle.addEventListener("click", logout);
 
-}
-
-function logout(){
-    alert("退出登录！");
-    setCookie("CustomerID", null, -1);
-    setCookie("token", null, -1);
-    setCookie("username", null, -1);
-    window.location.href="../html/index.html";
+    function logout(){
+        alert("退出登录！");
+        setCookie("CustomerID", null, -1);
+        setCookie("token", null, -1);
+        setCookie("username", null, -1);
+        window.location.href="../html/index.html";
+    }
 }
