@@ -127,7 +127,7 @@ order_table_entry.innerHTML = "<tr>\n" +
     "\t\t<span class=\"DateCreated\">DateCreated</span>\n" +
     "\t</td>\n" +
     "\t<td>\n" +
-    "\t\t<span class=\"Title title_jump\">Title</span>\n" +
+    "\t\t<a class='title_jump'><span class=\"Title\">Title</span></a> \n" +
     "\t</td>\n" +
     "\t<td>\n" +
     "\t\t<span class=\"ArtistName\">Artist Name</span>\n" +
@@ -163,7 +163,7 @@ released_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"PaintingID\">PaintingID</span>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
-    "\t\t\t\t\t\t\t\t<span class=\"Title title_jump\">Title</span>\n" +
+    "\t\t\t\t\t\t\t\t<a class='title_jump'><span class=\"Title\">Title</span></a>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"ArtistName\">ArtistName</span>\n" +
@@ -198,7 +198,7 @@ sold_table_head.innerHTML = "<tr>\n" +
 export const sold_table_entry = document.createElement("tr");
 sold_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
-    "\t\t\t\t\t\t\t\t<span class=\"Title title_jump\">Title</span>\n" +
+    "\t\t\t\t\t\t\t\t<a class='title_jump'><span class=\"Title\">Title</span></a>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"DateCreated\">DateCreated</span>\n" +
