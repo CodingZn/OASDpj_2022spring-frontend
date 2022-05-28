@@ -127,7 +127,7 @@ order_table_entry.innerHTML = "<tr>\n" +
     "\t\t<span class=\"DateCreated\">DateCreated</span>\n" +
     "\t</td>\n" +
     "\t<td>\n" +
-    "\t\t<span class=\"Title\">Title</span>\n" +
+    "\t\t<span class=\"Title title_jump\">Title</span>\n" +
     "\t</td>\n" +
     "\t<td>\n" +
     "\t\t<span class=\"ArtistName\">Artist Name</span>\n" +
@@ -163,7 +163,7 @@ released_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"PaintingID\">PaintingID</span>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
-    "\t\t\t\t\t\t\t\t<span class=\"Title\">Title</span>\n" +
+    "\t\t\t\t\t\t\t\t<span class=\"Title title_jump\">Title</span>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"ArtistName\">ArtistName</span>\n" +
@@ -172,8 +172,8 @@ released_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"MSRP\">MSRP</span>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
-    "\t\t\t\t\t\t\t\t<button>Change</button>\n" +
-    "\t\t\t\t\t\t\t\t<button>Delete</button>\n" +
+    "\t\t\t\t\t\t\t\t<a class=\"release_jump\"><button>Change</button></a>\n" +
+    "\t\t\t\t\t\t\t\t<a class=\"release_jump\"><button>Delete</button></a>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t</tr>";
 
@@ -198,7 +198,7 @@ sold_table_head.innerHTML = "<tr>\n" +
 export const sold_table_entry = document.createElement("tr");
 sold_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
-    "\t\t\t\t\t\t\t\t<span class=\"Title\">Title</span>\n" +
+    "\t\t\t\t\t\t\t\t<span class=\"Title title_jump\">Title</span>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<span class=\"DateCreated\">DateCreated</span>\n" +
@@ -214,21 +214,21 @@ sold_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t</tr>";
 
-//??
+//cart
 export const painting_cart = document.createElement("div");
 painting_cart.innerHTML = "<div class=\"overview cart\">\n" +
     "\t\t\t\t\t<div class=\"checkbox box\">\n" +
     "\t\t\t\t\t\t<input type=\"checkbox\">\n" +
     "\t\t\t\t\t</div>\n" +
-    "\t\t\t\t\t<div class=\"box1 box\">\n" +
+    "\t\t\t\t\t<div class=\"box1 box\"><a class=\"image_jump\">\n" +
     "\t\t\t\t\t\t<img src=\"../loading.gif\" class=\"Image\">\n" +
-    "\t\t\t\t\t</div>\n" +
+    "\t\t\t\t\t</a></div>\n" +
     "\t\t\t\t\t<div class=\"box2 box\">\n" +
     "\t\t\t\t\t\t<div class=\"box21 box\">\n" +
     "\t\t\t\t\t\t\t<div class=\"textbox\">\n" +
-    "\t\t\t\t\t\t\t\t<p>\n" +
+    "\t\t\t\t\t\t\t\t<p><a class=\"title_jump\">\n" +
     "\t\t\t\t\t\t\t\t\t<span class=\"Title\">title</span>\n" +
-    "\t\t\t\t\t\t\t\t</p>\n" +
+    "\t\t\t\t\t\t\t\t</a></p>\n" +
     "\t\t\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t\t\t<div class=\"textbox\">\n" +
     "\t\t\t\t\t\t\t\t<p>\n" +
@@ -283,7 +283,7 @@ painting_cart.innerHTML = "<div class=\"overview cart\">\n" +
     "\t\t\t\t\t\t\t\t<div class=\"buttons_box flexbox block\">\n" +
     "\t\t\t\t\t\t\t\t\t<button><p>BUY NOW</p></button>\n" +
     "\t\t\t\t\t\t\t\t\t<button><p>DELETE</p></button>\n" +
-    "\t\t\t\t\t\t\t\t\t<button class=\"ToDetail\"><p>DETAIL</p></button>\n" +
+    "\t\t\t\t\t\t\t\t\t<a class=\"button_jump\"><button class=\"ToDetail\"><p>DETAIL</p></button></a>\n" +
     "\t\t\t\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t\t</div>\n" +

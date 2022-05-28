@@ -79,6 +79,10 @@ export function fillOrderByInformation(orderEle, Order){
         orderEle.getElementsByClassName('DateCreated')[0].innerText = Order.DateCreated;
     if (orderEle.getElementsByClassName('Title') && Order.Painting.Title)
         orderEle.getElementsByClassName('Title')[0].innerText = Order.Painting.Title;
+
+    if (orderEle.getElementsByClassName('title_jump').length){
+        orderEle.getElementsByClassName('title_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Order.Painting.PaintingID;
+    }
     if (orderEle.getElementsByClassName('ArtistName') && Order.Painting.ArtistName)
         orderEle.getElementsByClassName('ArtistName')[0].innerText = Order.Painting.ArtistName;
     if (orderEle.getElementsByClassName('MSRP') && Order.Painting.MSRP)
