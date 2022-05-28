@@ -21,7 +21,7 @@ export function getCookie(cname)
 
 //检查是否登录，返回cookie中user的值或false
 export function checkUserCookie(){
-    var user=getCookie("user");
+    var user = getCookie("CustomerID");
     if (user!=""){
         return user;
     }

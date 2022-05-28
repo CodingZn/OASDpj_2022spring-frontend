@@ -4,11 +4,6 @@ import {setCookie, checkUserCookie} from "./cookie.js";
 
 export function loadLoginForm(){
 
-    if(checkUserCookie()!= false){
-        alert("您已登录！");
-        window.location.href = "../html/index.html";
-    }
-
     //检查填写是否正确
     function checkLoginForm(){
         let a = checkLoginUsername();

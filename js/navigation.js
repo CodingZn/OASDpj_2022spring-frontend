@@ -12,6 +12,20 @@ export function loadNavigation(){
         let usernameEle = document.getElementById("username_nav_display");
         usernameEle.innerText = getCookie("username");
 
+        var user_manu_listEle = document.getElementById('user_manu_list');
+        user_manu_listEle.addEventListener("mouseover", function (){
+            let divs = user_manu_listEle.getElementsByTagName("div");
+            for (let div of divs){console.log(div);
+                div.style.display = "block";
+            }
+        })
+        user_manu_listEle.addEventListener("mouseleave", function (){
+            let divs = user_manu_listEle.getElementsByTagName("div");
+            for (let div of divs){console.log(div);
+                div.style.display = "none";
+            }
+            document.getElementById('user_manu').style.display = 'block';
+        })
     }
     else {//visitor
         menu_unauth.style.display = "flex";
