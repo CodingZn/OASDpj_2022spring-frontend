@@ -3,12 +3,14 @@ import {loadNavigation} from "./navigation.js";
 import {checkUserCookie, getCookie, setCookie} from "./cookie.js";
 import {PicBaseSrc} from "./vars.js";
 import {fillPaintingByInformation} from "./element.js";
+import {loadLoginForm} from "./login.js";
 
 var showingPictureNo = 0;
 var rolling5Pics;
 
 window.onload = function (){
     loadNavigation();
+    loadLoginForm();
 
     //点击轮播图
     var mainshow = document.getElementById("mainshow");

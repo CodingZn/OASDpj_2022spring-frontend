@@ -3,10 +3,10 @@
     function getInputElements(formId) {
         var form = document.getElementById(formId);
         var elements = new Array();
-        var tagElements = form.getElementsByTagName('input');
-        for (var j = 0; j < tagElements.length; j++){
-            if (tagElements[j].type !== 'submit')
-                elements.push(tagElements[j]);
+        var inputElements = form.getElementsByTagName('input');
+        for (var j = 0; j < inputElements.length; j++){
+            if (inputElements[j].type !== 'submit')
+                elements.push(inputElements[j]);
 
         }
         return elements;
