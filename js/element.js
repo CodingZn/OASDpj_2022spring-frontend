@@ -1,4 +1,4 @@
-import {PicBaseSrc} from "./vars";
+import {PicBaseSrc} from "./vars.js";
 
 export function fillPaintingByInformation(paintingEle, Painting, mode){
     if (mode == 'full'){
@@ -24,8 +24,8 @@ export function fillPaintingByInformation(paintingEle, Painting, mode){
     paintingEle.getElementsByClassName('Image')[0].src=PicBaseSrc+ Painting.ImageFileName;//ImageFileName
     paintingEle.getElementsByClassName('Popularity')[0].innerText=Painting.Popularity;
     paintingEle.getElementsByClassName('ReleaseDate')[0].innerText=Painting.ReleaseDate;
-    paintingEle.getElementsByClassName('Genre')[0].innerText=Painting.Genre;
-    paintingEle.getElementsByClassName('Subject')[0].innerText=Painting.Subject;
+    paintingEle.getElementsByClassName('Genre')[0].innerText=Genre;
+    paintingEle.getElementsByClassName('Subject')[0].innerText=Subject;
     paintingEle.getElementsByClassName('Description')[0].innerText=Painting.Description;
 
 

@@ -1,1 +1,1 @@
-export const PicBaseSrc = "../../images/works/"
+export const PicBaseSrc = "../works/"
