@@ -24,7 +24,7 @@ window.onload = function (){
 
     //翻页
     document.getElementById('next_page').addEventListener("click", function (){
-        if (now_page+1 < totalpage_now) {
+        if (now_page < totalpage_now) {
             now_page = now_page + 1;
             var text = document.getElementById('SearchText').value;
             var orderby = document.getElementById('SearchOrderBy').value;
