@@ -1,5 +1,6 @@
-export const PicBaseSrc = "../../images/works/"
-export const DetailBaseSrc = "../html/detail.html"
+export const PicBaseSrc = "../../images/works/";
+export const DetailBaseSrc = "../html/detail.html";
+export const ReleaseBaseUrl = "../html/release.html";
 
 //review
 export const reviewElementModal = document.createElement("div");

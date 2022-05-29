@@ -38,6 +38,7 @@ export const Ajax = {
         xhr.withCredentials=true;
         // 添加http头，发送信息至服务器时内容编码类型
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 console.log(xhr.responseText);

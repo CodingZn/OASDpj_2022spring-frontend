@@ -3,9 +3,10 @@ import {loadNavigation} from "./navigation.js";
 import {GetUrlParam, Param} from "./util.js";
 import {checkUserCookie} from "./cookie.js";
 import {formToJson} from "./form.js";
-import {fillPaintingByInformation} from "./element.js";
+import {fillPaintingByInformation, fillPaintingFormByInformation} from "./element.js";
 
 var type;
+var OldPainting_ID;
 window.onload = function (){
     loadNavigation();
     if (!checkUserCookie()){
@@ -17,7 +18,7 @@ window.onload = function (){
     let uploadPicShow = document.getElementById('uploadPicShow');
 
 
-    var OldPainting_ID = GetUrlParam('PaintingID');
+    OldPainting_ID = GetUrlParam('PaintingID');
     if (OldPainting_ID){
         getAPainting(OldPainting_ID);
     }
@@ -52,11 +53,15 @@ window.onload = function (){
     create_button.addEventListener("click", uploadForm);
 
     function uploadForm(){
-
         //上传表单
         var dataform = formToJson('info_form');
-        createAPainting(dataform);
-
+console.log(OldPainting_ID)
+        if (OldPainting_ID){//修改
+            changeAPainting(dataform, OldPainting_ID);
+        }
+        else{//新增
+            createAPainting(dataform);
+        }
     }
 
 }
@@ -74,7 +79,7 @@ function getAPainting(PaintingID) {
         var painting = o.painting;
 
         var releaseEle = document.getElementById('release');
-        fillPaintingByInformation(releaseEle, painting, 1);
+        fillPaintingFormByInformation(releaseEle, painting);
 
     }
 }
@@ -102,13 +107,19 @@ function changeAPainting(data, PaintingID){
     var url = "/release/release.php";
     var par = {PaintingID : PaintingID};
     var query = Param.parseQueryString(par);
-    Ajax.post(url, data, callback);
+    Ajax.put(url+query, data, callback);
 
     function callback(xhr){
         var jsontext = xhr.responseText;
         var o = JSON.parse(jsontext);
 
         var ImageFileName = o.ImageFileName;
+        var PaintingID = o.PaintingID;
+
+        let input_upload = document.getElementById('uploadPic');
+        var PicFile = input_upload.files[0];
+        type = type.substring(6);
+        uploadOnePicture(PicFile, ImageFileName, PaintingID);
 
     }
 

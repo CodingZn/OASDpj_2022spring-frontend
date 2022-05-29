@@ -1,4 +1,4 @@
-import {DetailBaseSrc, PicBaseSrc} from "./vars.js";
+import {DetailBaseSrc, PicBaseSrc, ReleaseBaseUrl} from "./vars.js";
 
 export function fillPaintingByInformation(paintingEle, Painting, isfull){
     if (isfull){
@@ -17,6 +17,15 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
     for (const SubjectName of Painting.Subject) {
         Subject = Subject + ' ' + SubjectName;
     }
+
+    if (paintingEle.getElementsByClassName('PaintingID').length)
+        paintingEle.getElementsByClassName('PaintingID')[0].innerText=Painting.PaintingID;
+
+    if (paintingEle.getElementsByClassName('PaintingID_storage').length)
+        paintingEle.getElementsByClassName('PaintingID_storage')[0].title=Painting.PaintingID;
+
+    if (paintingEle.getElementsByClassName('release_jump').length)
+        paintingEle.getElementsByClassName('release_jump')[0].href=ReleaseBaseUrl + '?PaintingID='+ Painting.PaintingID;
 
     paintingEle.getElementsByClassName('Title')[0].innerText=Painting.Title;
     paintingEle.getElementsByClassName('ArtistName')[0].innerText=Painting.ArtistName;
@@ -55,6 +64,46 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
 
 
 }
+
+export function fillPaintingFormByInformation(paintingEle, Painting){
+
+
+    paintingEle.getElementsByClassName('YearOfWork')[0].value=Painting.YearOfWork;
+    paintingEle.getElementsByClassName('Width')[0].value=Painting.Width;
+    paintingEle.getElementsByClassName('Height')[0].value=Painting.Height;
+    paintingEle.getElementsByClassName('Medium')[0].value=Painting.Medium;
+
+    if (paintingEle.getElementsByClassName('Description').length)
+        paintingEle.getElementsByClassName('Description')[0].value=Painting.Description;
+
+    if (paintingEle.getElementsByClassName('ArtistName').length)
+        paintingEle.getElementsByClassName('ArtistName')[0].value=Painting.ArtistName;
+
+    if (paintingEle.getElementsByClassName('GenreName').length && Painting.GenreName)
+        paintingEle.getElementsByClassName('GenreName')[0].value=Painting.GenreName;
+
+    if (paintingEle.getElementsByClassName('SubjectName').length && Painting.SubjectName)
+        paintingEle.getElementsByClassName('SubjectName')[0].value=Painting.SubjectName;
+
+    if (paintingEle.getElementsByClassName('MSRP').length)
+        paintingEle.getElementsByClassName('MSRP')[0].value=Painting.MSRP;
+
+    if (paintingEle.getElementsByClassName('Title').length)
+        paintingEle.getElementsByClassName('Title')[0].value=Painting.Title;
+
+    if (paintingEle.getElementsByClassName('Image').length)
+        paintingEle.getElementsByClassName('Image')[0].src=PicBaseSrc+ Painting.ImageFileName;//ImageFileName
+
+    let Genre = "";
+    for (const GenreName of Painting.Genre) {
+        Genre = Genre + ' ' + GenreName;
+    }
+    let Subject = "";
+    for (const SubjectName of Painting.Subject) {
+        Subject = Subject + ' ' + SubjectName;
+    }
+}
+
 
 
 export function fillReviewByInformation(reviewEle, Review){
