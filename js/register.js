@@ -166,7 +166,7 @@ export function loadRegisterForm(){
         if (element.value == null || element.value === "")
             document.getElementById("register_password2_blank").style.display = "inline";
         else{
-            let value1 = document.getElementById("register_password2").value;
+            let value1 = document.getElementById("register_password").value;
             if (value1 !== element.value){
                 document.getElementById("register_password2_error").style.display = "inline";
                 document.getElementById("register_password2_blank").style.display = "none";
