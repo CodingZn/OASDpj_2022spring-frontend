@@ -25,7 +25,6 @@ window.onload = function (){
         if(list.length === 0){
             let a = confirm("是否购买所有购物车中的商品？");
             if (a){
-                alert("已经购买");
                 checkout(1);
             }
         }
@@ -35,8 +34,30 @@ window.onload = function (){
                 var data = JSON.stringify({
                     PaintingIDs: list
                 })
-                alert("已经购买");
                 checkout(0, data);
+            }
+        }
+    })
+
+    document.getElementById('deletesome').addEventListener("click", function () {
+        var checkboxes = document.getElementById('CartBox').getElementsByTagName('input');
+        var checkbox_num = checkboxes.length;
+        var list = [];
+        for (let i=0; i<checkbox_num; i++){
+            if (checkboxes[i].checked){
+                list.push(checkboxes[i].parentElement.title);
+            }
+        }
+        if(list.length === 0){
+            alert("没有要删除的商品！");
+        }
+        else {
+            let a = confirm("是否删除所有选中的商品？");
+            if (a){
+                var data = JSON.stringify({
+                    PaintingIDs: list
+                })
+                deleteFromCart(data);
             }
 
         }
@@ -70,11 +91,9 @@ function getAllinCart(){
     }
 }
 
-export function deleteFromCart(PaintingID){
-    var par = {PaintingID : PaintingID};
-    var query = Param.parseQueryString(par);
+export function deleteFromCart(data){
     var url = "/cart/cart.php";
-    Ajax.delete(url+query, callback);
+    Ajax.delete(url, data, callback);
 
     function callback(xhr){
         var jsontext = xhr.responseText;

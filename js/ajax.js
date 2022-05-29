@@ -66,7 +66,7 @@ export const Ajax = {
 
     },
 
-    delete: function (url, callback) {
+    delete: function (url, data, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('DELETE', baseurl + url, true);
         xhr.withCredentials=true;
