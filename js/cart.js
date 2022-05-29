@@ -85,6 +85,27 @@ function getAllinCart(){
                 CartBoxEle.innerHTML = CartBoxEle.innerHTML + model.innerHTML;
             }
             document.getElementById('cart_total').innerText = nums;
+
+            var button_checkouts = document.getElementsByName('checkout_one');
+            var button_deletes = document.getElementsByName('delete_one');
+            for (let i=0; i<nums; i++){
+                button_deletes[i].addEventListener("click", function () {
+                    if(confirm("确认移除？")){
+                        let data = JSON.stringify({
+                            PaintingIDs: [button_deletes[i].title]
+                        })
+                        deleteFromCart(data);
+                    }
+                })
+                button_checkouts[i].addEventListener("click", function (){
+                    if(confirm("确认购买该商品？")){
+                        let data = JSON.stringify({
+                            PaintingIDs: [button_deletes[i].title]
+                        })
+                        checkout(0, data);
+                    }
+                })
+            }
         }
         else {
         }

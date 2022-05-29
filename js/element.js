@@ -67,6 +67,14 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
     if (paintingEle.getElementsByClassName('checkbox_label').length)
         paintingEle.getElementsByClassName('checkbox_label')[0].title=Painting.PaintingID;
 
+    if (paintingEle.getElementsByClassName('checkout_one').length)
+        paintingEle.getElementsByClassName('checkout_one')[0].title=Painting.PaintingID;
+
+    if (paintingEle.getElementsByClassName('delete_one').length)
+        paintingEle.getElementsByClassName('delete_one')[0].title=Painting.PaintingID;
+
+
+
 
 
 }

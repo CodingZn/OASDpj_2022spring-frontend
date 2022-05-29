@@ -288,8 +288,8 @@ painting_cart.innerHTML = "<div class=\"overview cart\">\n" +
     "\t\t\t\t\t\t\t<div class=\"box222 box\">\n" +
     "\t\t\t\t\t\t\t\t<p class=\"Description\">texttexttexttexttexttexttexttexttexttexttexttext</p>\n" +
     "\t\t\t\t\t\t\t\t<div class=\"buttons_box flexbox block\">\n" +
-    "\t\t\t\t\t\t\t\t\t<button><p>BUY NOW</p></button>\n" +
-    "\t\t\t\t\t\t\t\t\t<button><p>DELETE</p></button>\n" +
+    "\t\t\t\t\t\t\t\t\t<button name='checkout_one' class='checkout_one' title=''><p>BUY NOW</p></button>\n" +
+    "\t\t\t\t\t\t\t\t\t<button name='delete_one'  class='delete_one' title=''><p>DELETE</p></button>\n" +
     "\t\t\t\t\t\t\t\t\t<a class=\"button_jump\"><button class=\"ToDetail\"><p>DETAIL</p></button></a>\n" +
     "\t\t\t\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t\t\t</div>\n" +
