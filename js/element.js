@@ -113,15 +113,21 @@ export function fillPaintingFormByInformation(paintingEle, Painting){
 
 
 export function fillReviewByInformation(reviewEle, Review){
-    if (Review.UserName_create)
+    if (reviewEle.getElementsByClassName('UserName_create').length && Review.UserName_create)
         reviewEle.getElementsByClassName('UserName_create')[0].innerText=Review.UserName_create;
-    if (Review.CreateDateTime)
+    if (reviewEle.getElementsByClassName('CreateDateTime').length && Review.CreateDateTime)
         reviewEle.getElementsByClassName('CreateDateTime')[0].innerText=Review.CreateDateTime;
-    if (Review.Rating)
+    if (reviewEle.getElementsByClassName('Rating').length && Review.Rating)
         reviewEle.getElementsByClassName('Rating')[0].innerText=Review.Rating;
-    if (Review.Comment)
+    if (reviewEle.getElementsByClassName('Comment').length && Review.Comment)
         reviewEle.getElementsByClassName('Comment')[0].innerText=Review.Comment;
-    reviewEle.value = Review.RatingID;
+    if (reviewEle.getElementsByClassName('RatingID').length && Review.RatingID)
+        reviewEle.getElementsByClassName('RatingID')[0].title=Review.RatingID;
+    if (reviewEle.getElementsByClassName('CustomerID').length && Review.CustomerID)
+        reviewEle.getElementsByClassName('CustomerID')[0].title=Review.CustomerID;
+
+
+
     return reviewEle;
 }
 

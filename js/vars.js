@@ -25,7 +25,7 @@ reviewElementModal.innerHTML =
     "                                <p><span class=\"Comment\">There is no content.</span></p>\n" +
     "                            </div>\n" +
     "                            <div class=\"textbox\">\n" +
-    "                                <button class=\"likeIt\" value=1><span>Like The Review</span></button>\n" +
+    "                                <label class='CustomerID' title=''><label class='RatingID'><button name=\"ReviewConduct\" value=1><span>Like The Review</span></button></label></label>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n"

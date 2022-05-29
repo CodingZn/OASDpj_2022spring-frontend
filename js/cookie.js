@@ -19,7 +19,7 @@ export function getCookie(cname)
     return "";
 }
 
-//检查是否登录，返回cookie中user的值或false
+//检查是否登录，返回cookie中CustomerID的值或false
 export function checkUserCookie(){
     var CustomerID = getCookie("CustomerID");
     if (CustomerID!=""){
