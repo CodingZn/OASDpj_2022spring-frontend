@@ -54,11 +54,11 @@ export function loadRegisterForm(){
 
             if (xhr.status === 200){
                 alert(msg);
-                window.location.href = "../html/login.html";
+                window.location.reload();
+                document.getElementById('LoginForm').style.display = "block";
             }
             else {
                 alert(msg);
-                window.location.reload();
             }
         }
     }
@@ -154,7 +154,7 @@ export function loadRegisterForm(){
                 level.setAttribute("src", "../medium.png");
             }
             else if (element.value.length>=17 && element.value.length<=32){
-                level.src = "../strong.png";
+                level.setAttribute("src", "../strong.png");
             }
             return true;
         }
@@ -162,9 +162,9 @@ export function loadRegisterForm(){
     }
 
     function checkPassword2(){
-        let element = document.getElementById("password2");
+        let element = document.getElementById("register_password2");
         if (element.value == null || element.value === "")
-            document.getElementById("password2Blank").style.display = "inline";
+            document.getElementById("register_password2_blank").style.display = "inline";
         else{
             let value1 = document.getElementById("register_password2").value;
             if (value1 !== element.value){
