@@ -174,7 +174,7 @@ released_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<a class=\"release_jump\"><button>Change</button></a>\n" +
-    "\t\t\t\t\t\t\t\t<button>Delete</button>\n" +
+    "\t\t\t\t\t\t\t\t<button name='released_delete'>Delete</button>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t</tr>";
 

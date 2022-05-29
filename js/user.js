@@ -28,6 +28,7 @@ window.onload = function (){
         }
     })
 
+
 }
 
 function getUserInfo(){
@@ -60,6 +61,8 @@ function rechargeMoney(data){
         var msg = o.message;
 
         alert(msg);
+
+        window.location.reload();
     }
 
 }
@@ -101,11 +104,21 @@ function getMyPaintingsReleased(){
         var paintings_num = paintings.length; console.log(paintings);
 
         var released_table = document.getElementById('released_table');
+        var deleteButtons = document.getElementsByName('released_delete');
         released_table.innerHTML = released_table_head.innerHTML; console.log(released_table)
         for (let i=0; i<paintings_num; i++){
             var model = released_table_entry;
             fillPaintingByInformation(model, paintings[i]);
             released_table.innerHTML = released_table.innerHTML + model.innerHTML; console.log(released_table)
+        }
+        for (let i=0; i<paintings_num; i++){
+            let deleteButton=deleteButtons[i];
+            deleteButton.title = paintings[i].PaintingID;
+            deleteButton.addEventListener("click", function () {
+                if(confirm("确认删除？")){
+                    deleteMyPainting(this.title);
+                }
+            })
         }
 
     }
@@ -142,7 +155,7 @@ function deleteMyPainting(PaintingID){
     var url = "/user/myPainting.php";
     var par = {PaintingID : PaintingID};
     var query = Param.parseQueryString(par);
-    Ajax.delete(url+query, callback);
+    Ajax.delete(url+query, null, callback);
 
     function callback(xhr){
         var jsontext = xhr.responseText;
@@ -151,6 +164,8 @@ function deleteMyPainting(PaintingID){
         var msg = o.message;
 
         alert(msg);
+
+        window.location.reload();
     }
 
 }
