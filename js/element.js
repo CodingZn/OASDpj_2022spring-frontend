@@ -27,9 +27,15 @@ export function fillPaintingByInformation(paintingEle, Painting, isfull){
     if (paintingEle.getElementsByClassName('release_jump').length)
         paintingEle.getElementsByClassName('release_jump')[0].href=ReleaseBaseUrl + '?PaintingID='+ Painting.PaintingID;
 
-    paintingEle.getElementsByClassName('Title')[0].innerText=Painting.Title;
-    paintingEle.getElementsByClassName('ArtistName')[0].innerText=Painting.ArtistName;
-    paintingEle.getElementsByClassName('MSRP')[0].innerText=Painting.MSRP;
+    if (paintingEle.getElementsByClassName('Title').length)
+        paintingEle.getElementsByClassName('Title')[0].innerText=Painting.Title;
+
+    if (paintingEle.getElementsByClassName('ArtistName').length)
+        paintingEle.getElementsByClassName('ArtistName')[0].innerText=Painting.ArtistName;
+
+    if (paintingEle.getElementsByClassName('MSRP').length)
+        paintingEle.getElementsByClassName('MSRP')[0].innerText=Painting.MSRP;
+
     if (paintingEle.getElementsByClassName('image_jump').length){
         paintingEle.getElementsByClassName('image_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Painting.PaintingID;
     }
@@ -120,35 +126,35 @@ export function fillReviewByInformation(reviewEle, Review){
 }
 
 export function fillUserByInformation(userEle, Customer){
-    if (userEle.getElementsByClassName('UserName') &&  Customer.UserName)
+    if (userEle.getElementsByClassName('UserName').length &&  Customer.UserName)
         userEle.getElementsByClassName('UserName')[0].innerText = Customer.UserName;
 
-    if (userEle.getElementsByClassName('Email') &&  Customer.Email)
+    if (userEle.getElementsByClassName('Email').length &&  Customer.Email)
         userEle.getElementsByClassName('Email')[0].innerText = Customer.Email;
 
-    if (userEle.getElementsByClassName('Address') &&  Customer.Address)
+    if (userEle.getElementsByClassName('Address').length &&  Customer.Address)
         userEle.getElementsByClassName('Address')[0].innerText = Customer.Address;
 
-    if (userEle.getElementsByClassName('Phone') &&  Customer.Phone)
+    if (userEle.getElementsByClassName('Phone').length &&  Customer.Phone)
         userEle.getElementsByClassName('Phone')[0].innerText = Customer.Phone;
 
-    if (userEle.getElementsByClassName('UserAccount') &&  Customer.UserAccount)
+    if (userEle.getElementsByClassName('UserAccount').length &&  Customer.UserAccount)
         userEle.getElementsByClassName('UserAccount')[0].innerText = Customer.UserAccount;
 }
 
 export function fillOrderByInformation(orderEle, Order){
-    if (orderEle.getElementsByClassName('OrderID') && Order.OrderID)
+    if (orderEle.getElementsByClassName('OrderID').length && Order.OrderID)
         orderEle.getElementsByClassName('OrderID')[0].innerText = Order.OrderID;
-    if (orderEle.getElementsByClassName('DateCreated') && Order.OrderID)
+    if (orderEle.getElementsByClassName('DateCreated').length && Order.OrderID)
         orderEle.getElementsByClassName('DateCreated')[0].innerText = Order.DateCreated;
-    if (orderEle.getElementsByClassName('Title') && Order.Painting.Title)
+    if (orderEle.getElementsByClassName('Title').length && Order.Painting.Title)
         orderEle.getElementsByClassName('Title')[0].innerText = Order.Painting.Title;
 
     if (orderEle.getElementsByClassName('title_jump').length){
         orderEle.getElementsByClassName('title_jump')[0].href=DetailBaseSrc+'?PaintingID='+ Order.Painting.PaintingID;
     }
-    if (orderEle.getElementsByClassName('ArtistName') && Order.Painting.ArtistName)
+    if (orderEle.getElementsByClassName('ArtistName').length && Order.Painting.ArtistName)
         orderEle.getElementsByClassName('ArtistName')[0].innerText = Order.Painting.ArtistName;
-    if (orderEle.getElementsByClassName('MSRP') && Order.Painting.MSRP)
+    if (orderEle.getElementsByClassName('MSRP').length && Order.Painting.MSRP)
         orderEle.getElementsByClassName('MSRP')[0].innerText = Order.Painting.MSRP;
 }

@@ -174,7 +174,7 @@ released_table_entry.innerHTML = "<tr>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<a class=\"release_jump\"><button>Change</button></a>\n" +
-    "\t\t\t\t\t\t\t\t<a class=\"release_jump\"><button>Delete</button></a>\n" +
+    "\t\t\t\t\t\t\t\t<button>Delete</button>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t</tr>";
 
@@ -182,6 +182,9 @@ released_table_entry.innerHTML = "<tr>\n" +
 //sold table
 export const sold_table_head = document.createElement("tr");
 sold_table_head.innerHTML = "<tr>\n" +
+    "\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\tPaintingID\n" +
+    "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\tTitle\n" +
     "\t\t\t\t\t\t\t</td>\n" +
@@ -198,6 +201,9 @@ sold_table_head.innerHTML = "<tr>\n" +
 
 export const sold_table_entry = document.createElement("tr");
 sold_table_entry.innerHTML = "<tr>\n" +
+    "\t\t\t\t\t\t\t<td>\n" +
+    "\t\t\t\t\t\t\t\t<span class=\"PaintingID\">ID</span>\n" +
+    "\t\t\t\t\t\t\t</td>\n" +
     "\t\t\t\t\t\t\t<td>\n" +
     "\t\t\t\t\t\t\t\t<a class='title_jump'><span class=\"Title\">Title</span></a>\n" +
     "\t\t\t\t\t\t\t</td>\n" +
